@@ -23,7 +23,7 @@
 #### d. [MedicalProcedure](https://schema.org/MedicalProcedure)
 ### 3. [MedicalRiskFactor](https://schema.org/MedicalRiskFactor)
 > [!TIP]
-> Risk factors may be external or internal. External risk factors includes the physical environment (specific external exposome) and social determinants of health (general external exposome). Internal risk factors include the internal exposome, gene/environment interactions and the genome.
+> Risk factors may be external or internal. External risk factors includes the physical environment (specific external exposome) and social determinants of health (general external exposome). Internal risk factors include the internal exposome (biomarkers), gene/environment interactions and the genome.
 
 
 
