@@ -18,7 +18,7 @@
 #### a. [Substance](https://schema.org/Substance)
 #### b. [MedicalGuideline](https://schema.org/MedicalGuideline)
 > [!TIP]
-> A MedicalGuideline may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline.
+> A MedicalGuideline may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances.
 #### c. [LifeStyleModification](https://schema.org/LifestyleModification)
 #### d. [MedicalProcedure](https://schema.org/MedicalProcedure)
 ### 3. [MedicalRiskFactor](https://schema.org/MedicalRiskFactor)
