@@ -22,7 +22,7 @@ Specify here...
 ```
 ## B. [StudySubject](https://schema.org/studySubject)
 > [!TIP] 
-> In the OHDSI research paradigm in a study design that performs emulated clinical trial population-level estimation, a StudySubject maps to a target cohort and one or more comparator cohorts. So be sure to specify at least two StudySubjects. In other populatiom-level estimation designs a StudySubject may map to control cohorts and/or a nesting cohort.
+> In the OHDSI research paradigm in a study design that performs emulated clinical trial population-level estimation, a StudySubject maps to a target cohort and one or more comparator cohorts. So be sure to specify at least two StudySubjects. In other population-level estimation designs a StudySubject may map to control cohorts and/or a nesting cohort.
 > 
 > Target, comparator, control and nesting cohorts have OMOP CDM entry events that fall into one or more categories:
 > - MedicalCondition
