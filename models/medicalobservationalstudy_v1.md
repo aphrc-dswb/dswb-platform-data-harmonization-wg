@@ -1,6 +1,6 @@
 # [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy)
 > [!NOTE] 
-> A schema.org MedicalObservationalStudy has a study design, one or more study subjects and one or more health condition outcomes.
+> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, one or more study subjects and one or more health condition outcomes.
 > A MedicalObservationalStudy conducts [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) as described in the Book of OHDSI.
 
 > [!IMPORTANT]  
