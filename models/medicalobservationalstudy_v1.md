@@ -1,7 +1,10 @@
 # [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy)
-> [!TIP] 
+> [!NOTE] 
 > A schema.org MedicalObservationalStudy has a study design, one or more study subjects and one or more health condition outcomes.
-> A MedicalObservationalStudy conducts [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) in the Book of OHDSI.
+> A MedicalObservationalStudy conducts [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) as described in the Book of OHDSI.
+
+> [!IMPORTANT]  
+> The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. Instead, think of the MedicalObservationalStudy and this template as you complete it as an ***implementation guide***. It will circumscribe the (meta)data you need to perform the study. It will guide data preparation. As such, it is one of a class of tools that provides a [Bridge2AI](https://commonfund.nih.gov/bridge2ai).
 ## A. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
@@ -46,7 +49,7 @@ Specify here...
 ```
 #### b. [MedicalGuideline](https://schema.org/MedicalGuideline)
 > [!TIP]
-> A MedicalGuideline schema.org type may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances. A MedicalGuideline has a geography and a temporal coverage. In the OMOP CDM a MedicalGuideline maps to an [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf). The exposure_occurrence is a new clinical table that takes concepts from a new social determinants of health vocabulary table
+> A MedicalGuideline schema.org type may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances. A MedicalGuideline has a geography and a temporal coverage. In the OMOP CDM a MedicalGuideline maps to an [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure**. The external_exposure is a new clinical table that takes concepts from a new social determinants of health vocabulary table
 ```
 <
 
@@ -76,7 +79,7 @@ Specify here...
 ```
 ### 3. [MedicalRiskFactor](https://schema.org/MedicalRiskFactor)
 > [!TIP]
-> A MedicalRiskFactor may figure into target and comparator cohorts too. In schema.org a MedicalRiskFactor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication. These risk factors may be external or internal. External risk factors includes the physical environment (specific external exposome) and social determinants of health (general external exposome). Internal risk factors include the internal exposome (biomarkers), gene/environment interactions and the genome. Given its "richness", a MedicalRiskFactor can be mapped to one of several domains in the OMOP CDM including the [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) and the result from one or more [measurement](https://ohdsi.github.io/CommonDataModel/cdm54.html#measurement) occurrences.
+> A MedicalRiskFactor may figure into target and comparator cohorts too. In schema.org a MedicalRiskFactor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication. These risk factors may be external or internal. External risk factors includes the physical environment (specific external exposome) and social determinants of health (general external exposome). Internal risk factors include the internal exposome (biomarkers), gene/environment interactions and the genome. Given its "richness", a MedicalRiskFactor can be mapped to one of several domains in the OMOP CDM including the [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure** and the result from one or more [measurement](https://ohdsi.github.io/CommonDataModel/cdm54.html#measurement) occurrences.
 ```
 <
 
