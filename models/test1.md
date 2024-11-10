@@ -5,7 +5,7 @@
 ## A. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
-> - cohort method design
+> - cohort method design aka emulated clinical trial
 > - self-controlled cohort design
 > - case-control design
 > - case-crossover design
