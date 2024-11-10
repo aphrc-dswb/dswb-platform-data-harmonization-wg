@@ -24,11 +24,16 @@ Specify here...
 > [!TIP] 
 > In the OHDSI research paradigm in a study design that performs emulated clinical trial population-level estimation, a StudySubject maps to a target cohort and one or more comparator cohorts. So be sure to specify at least two StudySubjects. In other populatiom-level estimation designs a StudySubject may map to control cohorts and/or a nesting cohort.
 > 
-> Target, comparator, control and nesting cohorts have OMOP CDM entry events that fall into one or more clinical domains, depending on ...
+> Target, comparator, control and nesting cohorts have OMOP CDM entry events that fall into one or more categories:
+> - MedicalCondition
+> - Intervention
+> - MedicalRiskFactor
 
+> [!TIP]
+> Cohorts may take multiple clinical events from the same clinical domain.
 ### 1. [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
-> In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test").
+> In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). 
 ```
 <
 
@@ -49,7 +54,7 @@ Specify here...
 ```
 #### b. [MedicalGuideline](https://schema.org/MedicalGuideline)
 > [!TIP]
-> A MedicalGuideline schema.org type may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances. A MedicalGuideline has a geography and a temporal coverage. In the OMOP CDM a MedicalGuideline maps to an [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure**. The external_exposure is a new clinical table that takes concepts from a new social determinants of health vocabulary table
+> A MedicalGuideline schema.org type may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances. A MedicalGuideline has a geography and a temporal coverage. In the OMOP CDM a MedicalGuideline maps to an [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure**. The external_exposure is a new clinical table that takes concepts from a new social determinants of health vocabulary table.
 ```
 <
 
