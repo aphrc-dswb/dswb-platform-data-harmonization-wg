@@ -7,7 +7,7 @@
 > There is one caveat. The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. Instead, think of the MedicalObservationalStudy and this template as you complete it as an ***implementation guide***. It will circumscribe the (meta)data you need to perform the study. It will guide data preparation. As such, it is one of a class of tools that provides a [Bridge2AI](https://commonfund.nih.gov/bridge2ai).
 
 > [!NOTE]  
-> Once...
+> As MedicalObservationalStudy research plans are developed and completed
 ## A. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
