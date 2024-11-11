@@ -3,11 +3,11 @@
 > A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, one or more study subjects and one or more health condition outcomes.
 > With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) much as it is represented and explained in the Book of OHDSI.
 
-> [!IMPORTANT]  
+> [!CAUTION]  
 > There is one caveat. The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. Instead, think of the MedicalObservationalStudy and this template as you complete it as an ***implementation guide***. It will circumscribe the (meta)data you need to perform the study. It will guide data preparation. As such, it is one of a class of tools that provides a [Bridge2AI](https://commonfund.nih.gov/bridge2ai).
 
-> [!NOTE]  
-> As MedicalObservationalStudy research plans are developed and completed
+> [!IMPORTANT]  
+> As MedicalObservationalStudy research plans are developed and completed across the several APHRC DSWB GitHub repositories, they will be included in a catalog. The catalog will be searchable by keyword and as a knowledge graph.
 ## A. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
