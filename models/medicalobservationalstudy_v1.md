@@ -3,6 +3,17 @@
 > A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, two or more study subjects aka "cohorts" and one or more health condition outcomes.
 > With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) much as it is represented and explained in the Book of OHDSI.
 
+---
+## Purpose and Objectives
+
+The primary objective of this template is to guide users in documenting Medical Observational Studies consistently across DSWB pathfinders. By standardizing metadata and study elements, this template ensures that:
+
+1. **Study Documentation**: Critical study components are clearly defined, making studies easily understood and replicable.
+2. **FAIR Principles**: Documentation aligns with the FAIR (Findable, Accessible, Interoperable, and Reusable) principles to support data sharing and reusability.
+3. **Cataloging and Discoverability**: Completed study documentation will be included in a searchable catalog, enhancing the discoverability of studies by keywords and facilitating a knowledge graph structure for interconnected research data.
+
+---
+
 > [!CAUTION]  
 > There is one caveat. The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. 
 
@@ -11,6 +22,20 @@
 
 > [!IMPORTANT] 
 > As MedicalObservationalStudy research plans are developed and completed across the several APHRC DSWB GitHub repositories, they will be included in a catalog. The catalog will be searchable by keyword and as a knowledge graph.
+
+
+## Study Documentation Outline
+
+This template is organized into three key sections:
+
+1. [**A. StudyDesign**](#a-studydesign): Specifies the type of observational study design, aligning with OHDSI’s methodologies.
+2. [**B. StudySubject**](#b-studysubject): Defines the study cohorts, their attributes, and relevant conditions.
+3. [**C. HealthCondition**](#c-health-condition): Describes the health outcomes being investigated.
+
+Each section contains properties and descriptive guidance for accurate, consistent documentation.
+
+
+
 ## A. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
@@ -31,9 +56,9 @@ Specify here...
 > In the OHDSI research paradigm in a study design that performs emulated clinical trial population-level estimation, a StudySubject maps to a target cohort and one or more comparator cohorts. So be sure to specify at least two StudySubjects. In other population-level estimation designs a StudySubject may map to control cohorts and/or a nesting cohort.
 > 
 > StudySubjects (aka "cohorts" in the OHDSI data analysis workbench) may consist of one or more of the following clinical and/or population health entities:
-> - MedicalConditions
-> - Interventions
-> - MedicalRiskFactors
+> 1. [**MedicalConditions**](#1-medicalcondition)
+> 2. [**Interventions**](#2-intervention)
+> 3. [**MedicalRiskFactors**](#3-medicalriskfactor)
 
 ### 1. [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
