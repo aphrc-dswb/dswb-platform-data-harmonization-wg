@@ -381,8 +381,29 @@ provides a <a href="https://commonfund.nih.gov/bridge2ai">Bridge2AI</a>.</p>
 <p>[!IMPORTANT] As MedicalObservationalStudy research plans are
 developed and completed across the several APHRC DSWB GitHub
 repositories, they will be included in a catalog. The catalog will be
-searchable by keyword and as a knowledge graph. ## A. StudyDesign [!TIP]
-In schema.org a study design takes an enumeration called <a href="https://schema.org/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>.
+searchable by keyword and as a knowledge graph.</p>
+</blockquote>
+<div id="study-documentation-outline" class="section level2">
+<h2>Study Documentation Outline</h2>
+<p>This template is organized into three key sections:</p>
+<ol style="list-style-type: decimal">
+<li><a href="#a-studydesign"><strong>A. StudyDesign</strong></a>:
+Specifies the type of observational study design, aligning with OHDSI’s
+methodologies.</li>
+<li><a href="#b-studysubject"><strong>B. StudySubject</strong></a>:
+Defines the study cohorts, their attributes, and relevant
+conditions.</li>
+<li><a href="#c-health-condition"><strong>C.
+HealthCondition</strong></a>: Describes the health outcomes being
+investigated.</li>
+</ol>
+<p>Each section contains properties and descriptive guidance for
+accurate, consistent documentation.</p>
+</div>
+<div id="a.-studydesign" class="section level2">
+<h2>A. StudyDesign</h2>
+<blockquote>
+<p>[!TIP] In schema.org a study design takes an enumeration called <a href="https://schema.org/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>.
 Here we are proposing a different enumeration – one that corresponds to
 the <a href="https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html">several
 types of population-level estimation</a> detailed in the Book of OHDSI:
@@ -395,6 +416,7 @@ self-controlled case series design</p>
 Specify here...
 
 &gt;</code></pre>
+</div>
 <div id="b.-studysubject" class="section level2">
 <h2>B. <a href="https://schema.org/studySubject">StudySubject</a></h2>
 <blockquote>
@@ -406,8 +428,8 @@ designs a StudySubject may map to control cohorts and/or a nesting
 cohort.</p>
 <p>StudySubjects (aka “cohorts” in the OHDSI data analysis workbench)
 may consist of one or more of the following clinical and/or population
-health entities: - MedicalConditions - Interventions -
-MedicalRiskFactors</p>
+health entities: 1. <a href="#id_1-medicalcondition"><strong>MedicalConditions</strong></a> 2.
+<a href="#id_2-intervention"><strong>Interventions</strong></a> 3. <a href="#id_3-medicalriskfactor"><strong>MedicalRiskFactors</strong></a></p>
 </blockquote>
 <div id="medicalcondition" class="section level3">
 <h3>1. <a href="https://schema.org/MedicalCondition">MedicalCondition</a></h3>
