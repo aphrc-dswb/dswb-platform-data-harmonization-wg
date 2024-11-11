@@ -1,12 +1,15 @@
 # [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy)
 > [!NOTE] 
-> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, one or more study subjects and one or more health condition outcomes.
+> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, two or more study subjects aka "cohorts" and one or more health condition outcomes.
 > With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) much as it is represented and explained in the Book of OHDSI.
 
 > [!CAUTION]  
-> There is one caveat. The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. Instead, think of the MedicalObservationalStudy and this template as you complete it as an ***implementation guide***. It will circumscribe the (meta)data you need to perform the study. It will guide data preparation. As such, it is one of a class of tools that provides a [Bridge2AI](https://commonfund.nih.gov/bridge2ai).
+> There is one caveat. The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. 
 
-> [!IMPORTANT]  
+> [!TIP]  
+> Instead, think of the MedicalObservationalStudy and this template as you complete it as an ***implementation guide***. It will circumscribe the (meta)data you need to perform the study. It will guide data preparation. As such, it is one of a class of tools that provides a [Bridge2AI](https://commonfund.nih.gov/bridge2ai).
+
+> [!IMPORTANT] 
 > As MedicalObservationalStudy research plans are developed and completed across the several APHRC DSWB GitHub repositories, they will be included in a catalog. The catalog will be searchable by keyword and as a knowledge graph.
 ## A. StudyDesign
 > [!TIP]
@@ -27,13 +30,11 @@ Specify here...
 > [!TIP] 
 > In the OHDSI research paradigm in a study design that performs emulated clinical trial population-level estimation, a StudySubject maps to a target cohort and one or more comparator cohorts. So be sure to specify at least two StudySubjects. In other population-level estimation designs a StudySubject may map to control cohorts and/or a nesting cohort.
 > 
-> Target, comparator, control and nesting cohorts have OMOP CDM entry events that fall into one or more categories:
-> - MedicalCondition
-> - Intervention
-> - MedicalRiskFactor
+> StudySubjects (aka "cohorts" in the OHDSI data analysis workbench) may consist of one or more of the following clinical and/or population health entities:
+> - MedicalConditions
+> - Interventions
+> - MedicalRiskFactors
 
-> [!TIP]
-> Cohorts may take multiple clinical events from the same clinical domain.
 ### 1. [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
 > In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). 
@@ -44,7 +45,13 @@ Specify here...
 
 >
 ```
-### 2. Intervention...
+### 2. Intervention
+> [!TIP]
+> In schema.org there are several types of intervention:
+> - Substances
+> - Public health medical guidelines
+> - LifestyleModifications
+
 #### a. [Substance](https://schema.org/Substance)
 > [!TIP]
 > A schema.org Substance may be a drug and/or a dietary supplement. In the OMOP CDM, a schema.org Substance maps to a [drug_exposure](https://ohdsi.github.io/CommonDataModel/cdm54.html#drug_exposure).
@@ -77,7 +84,7 @@ Specify here...
 ```
 #### d. [MedicalProcedure](https://schema.org/MedicalProcedure)
 > [!TIP]
-> A schema.org MedicalProcedure may be a DiagnosticProcedure, a Palliative Procedure, a PhysicalExam, a SurgicalProcedure and/or TherapeuticProcedure for MedicalTherapy or PsychologicalTreatment. In the OMOP CDM, a schema.org MedicalProcedure maps to an [procedure_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#procedure_occurrence) as a rule.
+> A schema.org MedicalProcedure may be a DiagnosticProcedure, a Palliative Procedure, a PhysicalExam, a SurgicalProcedure and/or TherapeuticProcedure for MedicalTherapy or PsychologicalTreatment. In the OMOP CDM, a schema.org MedicalProcedure maps to a [procedure_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#procedure_occurrence) as a rule.
 ```
 <
 
@@ -87,7 +94,11 @@ Specify here...
 ```
 ### 3. [MedicalRiskFactor](https://schema.org/MedicalRiskFactor)
 > [!TIP]
-> A MedicalRiskFactor may figure into target and comparator cohorts too. In schema.org a MedicalRiskFactor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication. These risk factors may be external or internal. External risk factors includes the physical environment (specific external exposome) and social determinants of health (general external exposome). Internal risk factors include the internal exposome (biomarkers), gene/environment interactions and the genome. Given its "richness", a MedicalRiskFactor can be mapped to one of several domains in the OMOP CDM including the [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure** and the result from one or more [measurement](https://ohdsi.github.io/CommonDataModel/cdm54.html#measurement) occurrences.
+> A MedicalRiskFactor may figure into study subjects too. In schema.org a MedicalRiskFactor is "anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication". These risk factors may be external or internal. External risk factors includes the physical environment (sometimes called the "specific external exposome") and social determinants of health (sometimes called the "general external exposome"). Internal risk factors include the internal exposome, gene/environment interactions and the genome.
+>
+> ![The Exposome](https://ars.els-cdn.com/content/image/1-s2.0-S0098299721000467-gr1_lrg.jpg)
+>
+>  Given its "richness", a MedicalRiskFactor can be mapped to one of several domains in the OMOP CDM including the [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure** and the result from one or more [measurement](https://ohdsi.github.io/CommonDataModel/cdm54.html#measurement) occurrences. Measurements provide a window into the so-called "internal exposome".
 ```
 <
 
