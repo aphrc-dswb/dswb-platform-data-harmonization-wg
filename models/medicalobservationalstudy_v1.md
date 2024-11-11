@@ -51,6 +51,7 @@ Specify here...
 > - Substances
 > - Public health medical guidelines
 > - LifestyleModifications
+> - MedicalProcedures
 
 #### a. [Substance](https://schema.org/Substance)
 > [!TIP]
