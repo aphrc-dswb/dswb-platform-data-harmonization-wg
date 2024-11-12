@@ -31,6 +31,7 @@ This template is organized into three key sections:
 > 1. [**A. StudyDesign**](#a-studydesign): Specifies the type of observational study design, aligning with OHDSI’s methodologies.
 > 2. [**B. StudySubject**](#b-studysubject): Defines the study cohorts, their attributes, and relevant conditions.
 > 3. [**C. HealthCondition**](#c-health-condition): Describes the health outcomes being investigated.
+> 4. [**D. Additional Properties**](#d-additional-properties): Contains supplementary study details such as status, StudyLocation and funding.
 
 Each section contains properties and descriptive guidance for accurate, consistent documentation.
 
@@ -144,5 +145,39 @@ Specify here...
 >
 ```
 
+## D. Additional Properties
+> [!TIP]
+> Refer to extra attributes that provide supplementary information about a subject, beyond the core properties. These details help enhance understanding or categorization.
 
+#### a. [Status](https://schema.org/status)
+> [!TIP]  
+> The status of the study provides important context regarding its current state, such as whether it is in progress, completed, or suspended. This property is critical for tracking the timeline and overall progress of the study.
+```
+<
 
+Specify here...
+
+>
+```
+#### b. [funding](https://schema.org/sponsor)
+> [!TIP]  
+> A Grant that directly or indirectly provide funding or sponsorship for this item. See also ownershipFundingInfo.
+
+```
+<
+
+Specify here...
+
+>
+```
+#### c. [StudyLocation](https://schema.org/studyLocation)
+> [!TIP]  
+> Study location refers to the geographical area where the research is being conducted. This is important for understanding the context of the study, particularly in population health studies where location may influence outcomes.
+
+```
+<
+
+Specify here...
+
+>
+```
