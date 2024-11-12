@@ -8,9 +8,9 @@
 
 The primary objective of this template is to guide users in documenting Medical Observational Studies consistently across DSWB pathfinders. By standardizing metadata and study elements, this template ensures that:
 
-1. **Study Documentation**: Critical study components are clearly defined, making studies easily understood and replicable.
-2. **FAIR Principles**: Documentation aligns with the FAIR (Findable, Accessible, Interoperable, and Reusable) principles to support data sharing and reusability.
-3. **Cataloging and Discoverability**: Completed study documentation will be included in a searchable catalog, enhancing the discoverability of studies by keywords and facilitating a knowledge graph structure for interconnected research data.
+> 1. **Study Documentation**: Critical study components are clearly defined, making studies easily understood and replicable.
+> 2. **FAIR Principles**: Documentation aligns with the FAIR (Findable, Accessible, Interoperable, and Reusable) principles to support data sharing and reusability.
+> 3. **Cataloging and Discoverability**: Completed study documentation will be included in a searchable catalog, enhancing the discoverability of studies by keywords and facilitating a knowledge graph structure for interconnected research data.
 
 ---
 
@@ -28,9 +28,9 @@ The primary objective of this template is to guide users in documenting Medical 
 
 This template is organized into three key sections:
 
-1. [**A. StudyDesign**](#a-studydesign): Specifies the type of observational study design, aligning with OHDSI’s methodologies.
-2. [**B. StudySubject**](#b-studysubject): Defines the study cohorts, their attributes, and relevant conditions.
-3. [**C. HealthCondition**](#c-health-condition): Describes the health outcomes being investigated.
+> 1. [**A. StudyDesign**](#a-studydesign): Specifies the type of observational study design, aligning with OHDSI’s methodologies.
+> 2. [**B. StudySubject**](#b-studysubject): Defines the study cohorts, their attributes, and relevant conditions.
+> 3. [**C. HealthCondition**](#c-health-condition): Describes the health outcomes being investigated.
 
 Each section contains properties and descriptive guidance for accurate, consistent documentation.
 
@@ -39,11 +39,12 @@ Each section contains properties and descriptive guidance for accurate, consiste
 ## A. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
-> - cohort method design aka emulated clinical trial
-> - self-controlled cohort design
-> - case-control design
-> - case-crossover design
-> - self-controlled case series design
+
+> - **Cohort Method Design** *(emulated clinical trial)*: Compares exposure-based cohorts to estimate specific outcomes.
+> - **Self-Controlled Cohort Design**: Compares timepoints within the same cohort to assess exposure-related risks.
+> - **Case-Control Design**: Contrasts cases (with outcome) and controls (without outcome).
+> - **Case-Crossover Design**: Assesses exposure risk by comparing periods within subjects.
+> - **Self-Controlled Case Series Design**: Evaluates risks by comparing individual time periods.
 ```
 <
 
@@ -73,10 +74,10 @@ Specify here...
 ### 2. Intervention
 > [!TIP]
 > In schema.org there are several types of intervention:
-> - Substances
-> - Public health medical guidelines
-> - LifestyleModifications
-> - MedicalProcedures
+> - [Substances](#a-substance)
+> - [Public health medical guidelines](#b-medicalguideline)
+> - [LifestyleModifications](#c-lifestylemodification)
+> - [MedicalProcedures](#d-medicalprocedure)
 
 #### a. [Substance](https://schema.org/Substance)
 > [!TIP]
