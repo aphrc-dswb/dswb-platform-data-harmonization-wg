@@ -23,21 +23,92 @@ The primary objective of this template is to guide users in documenting Medical 
 > [!IMPORTANT] 
 > As MedicalObservationalStudy research plans are developed and completed across the several APHRC DSWB GitHub repositories, they will be included in a catalog. The catalog will be searchable by keyword and as a knowledge graph.
 
-
-## Study Documentation Outline
-
-This template is organized into three key sections:
-
-> 1. [**A. StudyDesign**](#a-studydesign): Specifies the type of observational study design, aligning with OHDSI’s methodologies.
-> 2. [**B. StudySubject**](#b-studysubject): Defines the study cohorts, their attributes, and relevant conditions.
-> 3. [**C. HealthCondition**](#c-health-condition): Describes the health outcomes being investigated.
-> 4. [**D. Additional Properties**](#d-additional-properties): Contains supplementary study details such as status, StudyLocation and funding.
-
-Each section contains properties and descriptive guidance for accurate, consistent documentation.
+---
 
 
+## Table of Contents
+1. [General Properties](#1-general-properties)  
+   1.1 [Research Questions](#11-research-questions)  
+   1.2 [Study Location](#12-studylocation)  
+   1.3 [Funding](#12-studylocation)  
+   1.4 [Status](#14-status)  
+   1.5 [Outcomes of Interest](#15--outcomes-of-interest)  
+2. [Study Design](#2-studydesign)  
+3. [Study Subject](#3-studysubject)  
+   3.1 [Medical Condition](#31-medicalcondition)  
+   3.2 [Intervention](#32-intervention)  
+       a. [Substance](#substance)  
+       b. [Medical Guideline](#medical-guideline)  
+       c. [Lifestyle Modification](#lifestyle-modification)  
+       d. [Medical Procedure](#medical-procedure)  
+   3.3 [Medical Risk Factor](#medical-risk-factor)  
+4. [Health Condition](#health-condition)
 
-## A. StudyDesign
+
+---
+## 1. General Properties
+> [!NOTE] 
+> The **General Properties** section includes foundational attributes that apply across the entire study. These properties set the context and goals of the study, allowing readers to understand the study's scope and purpose before exploring specific study elements.
+
+---
+
+### 1.1 Research Questions
+> [!NOTE]  
+> List the primary research question(s) guiding the study. These questions frame the study’s objectives, influence study design choices, and clarify the outcomes of interest.
+
+
+```
+<
+
+Specify here...
+
+>
+```
+#### 1.2 [StudyLocation](https://schema.org/studyLocation)
+> [!TIP]  
+> Study location refers to the geographical area where the research is being conducted. This is important for understanding the context of the study, particularly in population health studies where location may influence outcomes.
+
+```
+<
+
+Specify here...
+
+>
+```
+#### 1.3 [Funding](https://schema.org/sponsor)
+> [!TIP]  
+> A Grant that directly or indirectly provide funding or sponsorship for this item. See also ownershipFundingInfo.
+
+```
+<
+
+Specify here...
+
+>
+```
+#### 1.4 [Status](https://schema.org/status)
+> [!TIP]  
+> The status of the study provides important context regarding its current state, such as whether it is in progress, completed, or suspended. This property is critical for tracking the timeline and overall progress of the study.
+```
+<
+
+Specify here...
+
+>
+```
+#### 1.5  Outcomes of Interest
+> [!TIP]  
+> Define the primary and secondary outcomes that the study seeks to evaluate. These outcomes align with the research questions and help to guide data analysis.
+
+```
+<
+
+Specify here...
+
+>
+
+```
+## 2. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
 
@@ -53,16 +124,17 @@ Specify here...
 
 >
 ```
-## B. [StudySubject](https://schema.org/studySubject)
+## 3. [StudySubject](https://schema.org/studySubject)
 > [!TIP] 
 > In the OHDSI research paradigm in a study design that performs emulated clinical trial population-level estimation, a StudySubject maps to a target cohort and one or more comparator cohorts. So be sure to specify at least two StudySubjects. In other population-level estimation designs a StudySubject may map to control cohorts and/or a nesting cohort.
 > 
 > StudySubjects (aka "cohorts" in the OHDSI data analysis workbench) may consist of one or more of the following clinical and/or population health entities:
-> 1. [**MedicalConditions**](#1-medicalcondition)
-> 2. [**Interventions**](#2-intervention)
-> 3. [**MedicalRiskFactors**](#3-medicalriskfactor)
 
-### 1. [MedicalCondition](https://schema.org/MedicalCondition)
+* **3.1. [Medical Conditions](#1-medicalcondition)**
+* **3.2. [Interventions](#2-intervention)**
+* **3.3. [Medical Risk Factors](#3-medicalriskfactor)**
+
+### 3.1 [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
 > In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). 
 ```
@@ -72,13 +144,13 @@ Specify here...
 
 >
 ```
-### 2. Intervention
+### 3.2 Intervention
 > [!TIP]
 > In schema.org there are several types of intervention:
-> - [Substances](#a-substance)
-> - [Public health medical guidelines](#b-medicalguideline)
-> - [LifestyleModifications](#c-lifestylemodification)
-> - [MedicalProcedures](#d-medicalprocedure)
+* [a. Substances](#a-substance)
+* [b. Public Health Medical Guidelines](#b-medicalguideline)
+* [c. Lifestyle Modifications](#c-lifestylemodification)
+* [d. Medical Procedures](#d-medicalprocedure)
 
 #### a. [Substance](https://schema.org/Substance)
 > [!TIP]
@@ -120,7 +192,7 @@ Specify here...
 
 >
 ```
-### 3. [MedicalRiskFactor](https://schema.org/MedicalRiskFactor)
+### 3.3 [MedicalRiskFactor](https://schema.org/MedicalRiskFactor)
 > [!TIP]
 > A MedicalRiskFactor may figure into study subjects too. In schema.org a MedicalRiskFactor is "anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication". These risk factors may be external or internal. External risk factors includes the physical environment (sometimes called the "specific external exposome") and social determinants of health (sometimes called the "general external exposome"). Internal risk factors include the internal exposome, gene/environment interactions and the genome.
 >
@@ -134,7 +206,7 @@ Specify here...
 
 >
 ```
-## C. Health Condition
+## 4. Health Condition
 > [!TIP]
 > In a schema.org MedicalObservationalStudy a study subject may have one or more health condition outcomes. In the OHDSI research paradigm these health conditions correspond to outcome cohorts. In this paradigm entry events for outcome cohorts typically come from the OMOP CDM [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence) domain.
 ```
@@ -145,39 +217,3 @@ Specify here...
 >
 ```
 
-## D. Additional Properties
-> [!TIP]
-> Refer to extra attributes that provide supplementary information about a subject, beyond the core properties. These details help enhance understanding or categorization.
-
-#### a. [Status](https://schema.org/status)
-> [!TIP]  
-> The status of the study provides important context regarding its current state, such as whether it is in progress, completed, or suspended. This property is critical for tracking the timeline and overall progress of the study.
-```
-<
-
-Specify here...
-
->
-```
-#### b. [funding](https://schema.org/sponsor)
-> [!TIP]  
-> A Grant that directly or indirectly provide funding or sponsorship for this item. See also ownershipFundingInfo.
-
-```
-<
-
-Specify here...
-
->
-```
-#### c. [StudyLocation](https://schema.org/studyLocation)
-> [!TIP]  
-> Study location refers to the geographical area where the research is being conducted. This is important for understanding the context of the study, particularly in population health studies where location may influence outcomes.
-
-```
-<
-
-Specify here...
-
->
-```
