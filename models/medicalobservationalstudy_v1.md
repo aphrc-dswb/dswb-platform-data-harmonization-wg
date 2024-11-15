@@ -136,7 +136,7 @@ Specify here...
 
 ### 3.1 [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
-> In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). 
+> In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). Stepping back, do we have any medical conditions in our source data. Let's [ask an AI](https://www.google.com/search?q=how+do+we+know+if+someone+has+a+medical+condition&mstk=AUtExfD8EHEHslr_fxHPI2xD5QFUdEVKyFjkp_aqZmRNm4fEkOh6LkD0j3kx0oTtcJm8xBc9SlkEIlAsPe9mv_4PyK1nLQ_AFoKcqABb-XF3dF31v5JQwsev8tvs3MP8GmvPyJiBccMQjODksk5FB3zsuXMY3xHlwNIVzc0txcI8nxN6vuI&csuir=3).
 ```
 <
 
