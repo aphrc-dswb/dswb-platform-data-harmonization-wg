@@ -136,13 +136,13 @@ Specify here...
 
 ### 3.1 [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
-> Generally speaking, your source variable is a way to measure a concept. For the sake of standardization, our schema.org MedicalCondition measures a concept in a coding system called [SNOMED-CT](https://en.wikipedia.org/wiki/SNOMED_CT). In SNOMED-CT these medical conditions can be found in one of its many (14) hierarchical lists. [This list](https://athena.ohdsi.org/search-terms/terms?conceptClass=Clinical+Finding&domain=Condition&vocabulary=SNOMED&page=1&pageSize=15&query=) is 16,000 concepts long. Make sure your source medical condition variable measures a concept on this list.
+> Generally speaking, your source variable is a way to measure a concept. For the sake of standardization, our schema.org MedicalCondition measures a concept in a coding system called [SNOMED-CT](https://en.wikipedia.org/wiki/SNOMED_CT). In SNOMED-CT these medical conditions can be found in one of its many (14) hierarchical lists. [This list](https://athena.ohdsi.org/search-terms/terms?conceptClass=Clinical+Finding&domain=Condition&vocabulary=SNOMED&page=1&pageSize=15&query=) is 17,000 concepts long. Identify your source variable with a concept from this list. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 > 
 > When it comes to the OMOP CDM and OHDSI your medical condition source variable maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). A record in the OMOP CDM condition_occurrence table captures condition occurrence information, including the SNOMED-CT condition concept ID, the start and end date of the condition, and the source of the condition information.
 ```
 <
 
-Specify here...
+Specify medical condition (name, concept_id) doubles here if you can...
 
 >
 ```
