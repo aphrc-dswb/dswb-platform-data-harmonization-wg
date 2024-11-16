@@ -37,12 +37,12 @@ The primary objective of this template is to guide users in documenting Medical 
 3. [Study Subject](#3-studysubject)  
    3.1 [Medical Condition](#31-medicalcondition)  
    3.2 [Intervention](#32-intervention)  
-       a. [Substance](#substance)  
-       b. [Medical Guideline](#medical-guideline)  
-       c. [Lifestyle Modification](#lifestyle-modification)  
-       d. [Medical Procedure](#medical-procedure)  
-   3.3 [Medical Risk Factor](#medical-risk-factor)  
-4. [Health Condition](#health-condition)
+       a. [Substance](#a-substance)  
+       b. [Medical Guideline](#b-medicalguideline)  
+       c. [Lifestyle Modification](#c-lifestylemodification)  
+       d. [Medical Procedure](#d-medicalprocedure)  
+   3.3 [Medical Risk Factor](#33-medicalriskfactor)  
+4. [Health Condition](#4-health-condition)
 
 
 ---
@@ -130,17 +130,19 @@ Specify here...
 > 
 > StudySubjects (aka "cohorts" in the OHDSI data analysis workbench) may consist of one or more of the following clinical and/or population health entities:
 
-* **3.1. [Medical Conditions](#1-medicalcondition)**
-* **3.2. [Interventions](#2-intervention)**
-* **3.3. [Medical Risk Factors](#3-medicalriskfactor)**
+* **3.1. [Medical Conditions](#31-medicalcondition)**
+* **3.2. [Interventions](#32-intervention)**
+* **3.3. [Medical Risk Factors](#31-medicalcondition)**
 
 ### 3.1 [MedicalCondition](https://schema.org/MedicalCondition)
 > [!TIP]
-> In the OMOP CDM, a schema.org MedicalCondition maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "test"). 
+> Generally speaking, your source variable is a way to measure a concept. For the sake of standardization, our schema.org MedicalCondition measures a concept in a coding system called [SNOMED-CT](https://en.wikipedia.org/wiki/SNOMED_CT). In SNOMED-CT these medical conditions can be found in one of its many (14) hierarchical lists. [This list](https://athena.ohdsi.org/search-terms/terms?conceptClass=Clinical+Finding&domain=Condition&vocabulary=SNOMED&page=1&pageSize=15&query=) is 17,000 concepts long. Identify your source variable with a concept from this list. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
+> 
+> When it comes to the OMOP CDM and OHDSI your medical condition source variable maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence "In the OMOP CDM, a condition occurrence represents a diagnosis or medical condition recorded for a patient. It is inferred from clinical events associated with diagnoses, signs, symptoms, or other patient-reported information. The condition_occurrence table captures records about condition occurrences, including the condition concept ID, the start and end date of the condition, and the source of the condition information."). A record in the OMOP CDM condition_occurrence table captures condition occurrence information, including the SNOMED-CT condition concept ID, the start and end date of the condition, and the source of the condition information.
 ```
 <
 
-Specify here...
+Specify medical condition (name, concept_id) doubles here if you can...
 
 >
 ```
@@ -154,7 +156,7 @@ Specify here...
 
 #### a. [Substance](https://schema.org/Substance)
 > [!TIP]
-> A schema.org Substance may be a drug and/or a dietary supplement. In the OMOP CDM, a schema.org Substance maps to a [drug_exposure](https://ohdsi.github.io/CommonDataModel/cdm54.html#drug_exposure).
+> A schema.org Substance may be a drug and/or a dietary supplement. In the OMOP CDM, a schema.org Substance maps to a [drug_exposure](https://ohdsi.github.io/CommonDataModel/cdm54.html#drug_exposure "In the OMOP CDM, drug exposure refers to the utilization of a drug when ingested or otherwise introduced into the body. It is inferred from clinical events associated with orders, prescriptions, pharmacy dispensings, procedural administrations, and other patient-reported information. The drug_exposure table in the OMOP CDM captures records about drug exposure, including the drug concept ID, the start and end date of the exposure, and the quantity of the drug.").
 ```
 <
 
@@ -174,7 +176,7 @@ Specify here...
 ```
 #### c. [LifeStyleModification](https://schema.org/LifestyleModification)
 > [!TIP]
-> A schema.org LifeStyleModification may be a diet and/or a physical activity regimen. In the OMOP CDM, a schema.org LifeStyleModification maps to an [observation](https://ohdsi.github.io/CommonDataModel/cdm54.html#observation).
+> A schema.org LifeStyleModification may be a diet and/or a physical activity regimen. In the OMOP CDM, a schema.org LifeStyleModification maps to an [observation](https://ohdsi.github.io/CommonDataModel/cdm54.html#observation "Lifestyle modifications refer to non-pharmaceutical interventions aimed at improving health outcomes, such as changes in diet, exercise, or smoking cessation").
 ```
 <
 
@@ -184,7 +186,7 @@ Specify here...
 ```
 #### d. [MedicalProcedure](https://schema.org/MedicalProcedure)
 > [!TIP]
-> A schema.org MedicalProcedure may be a DiagnosticProcedure, a Palliative Procedure, a PhysicalExam, a SurgicalProcedure and/or TherapeuticProcedure for MedicalTherapy or PsychologicalTreatment. In the OMOP CDM, a schema.org MedicalProcedure maps to a [procedure_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#procedure_occurrence) as a rule.
+> A schema.org MedicalProcedure may be a DiagnosticProcedure, a Palliative Procedure, a PhysicalExam, a SurgicalProcedure and/or TherapeuticProcedure for MedicalTherapy or PsychologicalTreatment. In the OMOP CDM, a schema.org MedicalProcedure maps to a [procedure_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#procedure_occurrence "A medical procedure in OMOP CDM refers to a clinical activity performed for diagnostic or therapeutic purposes. The procedure_occurrence table records data about these procedures") as a rule.
 ```
 <
 
@@ -216,4 +218,3 @@ Specify here...
 
 >
 ```
-
