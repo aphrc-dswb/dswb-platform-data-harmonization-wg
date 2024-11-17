@@ -163,9 +163,7 @@ Specify one or more medical condition doubles here...
 >
 > RxNorm describes drugs at various levels of specificity called [TTYs](https://www.nlm.nih.gov/research/umls/rxnorm/docs/appendix5.html). In TTYs RxNorm achieves specificity by constructing concepts that combine a drug's ingredient(s) with one or more other characteristics. The TTY we are standardizing on are concepts that combine ingredients with the drug's dose form group. This combination is called SCDG (Semantic Clinical Drug Group). [This list](https://athena.ohdsi.org/search-terms/terms?conceptClass=Clinical+Dose+Group&conceptClass=CVX&conceptClass=Vaccine+Group&vocabulary=RxNorm&vocabulary=CVX&page=1&pageSize=30&query=) is 18,000 concepts long. SCDG was chosen for standardization in part because it disregards brand which gives it an international flavor. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 > 
-> In the OMOP CDM, a schema.org Substance maps to a [drug_exposure](https://ohdsi.github.io/CommonDataModel/cdm54.html#drug_exposure)
->
-> In the OMOP CDM, drug exposure refers to the utilization of a drug when ingested or otherwise introduced into the body. It is inferred from clinical events associated with orders, prescriptions, pharmacy dispensings, procedural administrations, and other patient-reported information. The drug_exposure table in the OMOP CDM captures records about drug exposure, including the drug concept ID, the start and end date of the exposure, and the quantity of the drug.
+> In the OMOP CDM, a schema.org Substance maps to a [drug_exposure](https://ohdsi.github.io/CommonDataModel/cdm54.html#drug_exposure). A record in the drug_exposure table includes the drug concept ID, the start and end date of the exposure, and the quantity of the drug (which need not be specified).
 ```
 <
 
