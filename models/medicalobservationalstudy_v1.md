@@ -176,21 +176,33 @@ Specify one or more Substance doubles here...
 ```
 #### b. [MedicalGuideline](https://schema.org/MedicalGuideline)
 > [!TIP]
-> A MedicalGuideline schema.org type may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances. A MedicalGuideline has a geography and a temporal coverage. In the OMOP CDM a MedicalGuideline maps to an [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure**. The external_exposure is a new clinical table that takes concepts from a new social determinants of health vocabulary table.
+> A MedicalGuideline schema.org type may have an authority, a legal status and one or more studies. Studies may both support and contraindicate a MedicalGuideline under various circumstances. A MedicalGuideline has a geography and a temporal coverage. In the OMOP CDM a MedicalGuideline maps to an [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure**. The external_exposure is a new clinical table that takes concepts from one of two new OHDSI vocabularies that together cover the **external exposome**.
+>
+> ![The Exposome](https://ars.els-cdn.com/content/image/1-s2.0-S0098299721000467-gr1_lrg.jpg)
+>
+> A link to a MedicalGuideline list across these two vocabularies is forthcoming. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 ```
 <
 
-Specify here...
+Specify one of more MedicalGuideline doubles here...
+
+(variable name, concept_id)
+(variable name, concept_id)
 
 >
 ```
 #### c. [LifeStyleModification](https://schema.org/LifestyleModification)
 > [!TIP]
-> A schema.org LifeStyleModification may be a diet and/or a physical activity regimen. In the OMOP CDM, a schema.org LifeStyleModification maps to an [observation](https://ohdsi.github.io/CommonDataModel/cdm54.html#observation "Lifestyle modifications refer to non-pharmaceutical interventions aimed at improving health outcomes, such as changes in diet, exercise, or smoking cessation").
+> A schema.org LifeStyleModification may be a diet and/or a physical activity regimen. Concepts for these thinfs can be found in one of the two new OHDSI exposome vocabularies. See above. A link to a list of LifeStyleModification concepts across these two vocabularies in forthcoming. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
+>
+> In the OMOP CDM, a schema.org LifeStyleModification maps to an [observation](https://ohdsi.github.io/CommonDataModel/cdm54.html#observation "Lifestyle modifications refer to non-pharmaceutical interventions aimed at improving health outcomes, such as changes in diet, exercise, or smoking cessation").
 ```
 <
 
-Specify here...
+Specify one or more LifeStyleModification doubles here...
+
+(variable name, concept_id)
+(variable name, concept_id)
 
 >
 ```
