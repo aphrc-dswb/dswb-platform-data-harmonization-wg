@@ -146,10 +146,10 @@ Specify here...
 ```
 <
 
-Specify one or more medical condition doubles here...
+Specify one or more medical condition as triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance)
+(variable name, concept_id, provenance)
 
 >
 ```
@@ -171,10 +171,10 @@ Specify one or more medical condition doubles here...
 ```
 <
 
-Specify one or more Substance doubles here...
+Specify one or more Substance as triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance )
+(variable name, concept_id, provenance)
 
 >
 ```
@@ -188,10 +188,10 @@ Specify one or more Substance doubles here...
 ```
 <
 
-Specify one of more MedicalGuideline doubles here...
+Specify one of more MedicalGuideline as triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance)
+(variable name, concept_id, provenance)
 
 >
 ```
@@ -203,10 +203,10 @@ Specify one of more MedicalGuideline doubles here...
 ```
 <
 
-Specify one or more LifeStyleModification doubles here...
+Specify one or more LifeStyleModification as triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance)
+(variable name, concept_id, provenance)
 
 >
 ```
@@ -223,10 +223,10 @@ Specify one or more LifeStyleModification doubles here...
 ```
 <
 
-Specify one or more MedicalProcedure doubles here...
+Specify one or more MedicalProcedure as triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance)
+(variable name, concept_id, provenance)
 
 >
 ```
@@ -240,10 +240,10 @@ Specify one or more MedicalProcedure doubles here...
 ```
 <
 
-Specify one or more MedicalProcedure doubles here...
+Specify one or more Medical Risk Factor as  triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance)
+(variable name, concept_id, provenance)
 
 >
 ```
@@ -255,10 +255,10 @@ Specify one or more MedicalProcedure doubles here...
 ```
 <
 
-Specify one or more health conditio outcomes here...
+Specify one or more health condition outcomes as triple here...
 
-(variable name, concept_id)
-(variable name, concept_id)
+(variable name, concept_id, provenance)
+(variable name, concept_id, provenance)
 
 >
 ```
