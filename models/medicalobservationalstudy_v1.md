@@ -143,16 +143,18 @@ Specify here...
 > [This list](https://athena.ohdsi.org/search-terms/terms?conceptClass=Disorder&conceptClass=Clinical+Finding&domain=Condition&vocabulary=SNOMED&invalidReason=Valid&page=1&pageSize=15&query=) is 100,000 concepts long and includes symptoms, signs, tests results and disorders. Identify your source variable with a concept from this list. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 > 
 > When it comes to the OMOP CDM and OHDSI your medical condition source variable maps to a [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence). A record in the OMOP CDM condition_occurrence table captures condition occurrence information, including the SNOMED-CT condition concept ID, the start and end date of the condition, and the source of the condition information.
+>
+> Specify one or more schema.org MedicalConditions as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
-
-Specify one or more medical condition as triple here...
 
 (variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
 
 >
 ```
+
+> 
 ### 3.2 Intervention
 > [!TIP]
 > In schema.org there are several types of intervention:
@@ -168,12 +170,12 @@ Specify one or more medical condition as triple here...
 > Let's think about RxNorm. RxNorm describes drugs at various levels of specificity called [TTYs](https://www.nlm.nih.gov/research/umls/rxnorm/docs/appendix5.html). In TTYs RxNorm achieves specificity by constructing concepts that combine a drug's ingredient(s) with one or more other characteristics. The TTY we are standardizing on are concepts that combine ingredients with the drug's dose form group. This combination is called SCDG (Semantic Clinical Drug Group). It has [a list](https://athena.ohdsi.org/search-terms/terms?conceptClass=Clinical+Dose+Group&conceptClass=CVX&conceptClass=Vaccine+Group&vocabulary=RxNorm&vocabulary=CVX&page=1&pageSize=30&query=) that is 18,000 concepts long. SCDG was chosen for standardization in part because it disregards brand which gives these concepts an international flavor. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 > 
 > In the OMOP CDM, a schema.org Substance maps to a [drug_exposure](https://ohdsi.github.io/CommonDataModel/cdm54.html#drug_exposure). A record in the drug_exposure table includes the drug concept ID, the start and end date of the exposure, and the quantity of the drug (which need not be specified).
+>
+> Specify one or more schema.org Substances as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
 
-Specify one or more Substance as triple here...
-
-(variable name, concept_id, provenance )
+(variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
 
 >
@@ -185,10 +187,10 @@ Specify one or more Substance as triple here...
 > ![The Exposome](https://ars.els-cdn.com/content/image/1-s2.0-S0098299721000467-gr1_lrg.jpg)
 >
 > A link to a MedicalGuideline list across these two vocabularies is forthcoming. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
+>
+> Specify one or more schema.org MedicalGuidelines as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
-
-Specify one of more MedicalGuideline as triple here...
 
 (variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
@@ -200,10 +202,10 @@ Specify one of more MedicalGuideline as triple here...
 > A schema.org LifeStyleModification may be a diet and/or a physical activity regimen. Concepts for these things can be found in one of the two new OHDSI exposome vocabularies. See above. A link to a list of LifeStyleModification concepts across these two vocabularies in forthcoming. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 >
 > In the OMOP CDM, a schema.org LifeStyleModification maps to an [observation](https://ohdsi.github.io/CommonDataModel/cdm54.html#observation "Lifestyle modifications refer to non-pharmaceutical interventions aimed at improving health outcomes, such as changes in diet, exercise, or smoking cessation").
+>
+> Specify one or more schema.org LifestyleModifications as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
-
-Specify one or more LifeStyleModification as triple here...
 
 (variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
@@ -220,10 +222,10 @@ Specify one or more LifeStyleModification as triple here...
 >
 >
 > In the OMOP CDM, a schema.org MedicalProcedure maps to a [procedure_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#procedure_occurrence "A medical procedure in OMOP CDM refers to a clinical activity performed for diagnostic or therapeutic purposes. The procedure_occurrence table records data about these procedures") as a rule.
+>
+> Specify one or more schema.org MedicalProcedures as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
-
-Specify one or more MedicalProcedure as triple here...
 
 (variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
@@ -237,10 +239,10 @@ Specify one or more MedicalProcedure as triple here...
 > ![The Exposome](https://ars.els-cdn.com/content/image/1-s2.0-S0098299721000467-gr1_lrg.jpg)
 >
 >  Given its "richness", a MedicalRiskFactor can be mapped to one of several domains in the OMOP CDM including the [exposure_occurrence](https://www.ohdsi.org/wp-content/uploads/2023/10/19-zollovenecek-BriefReport.pdf) aka **external_exposure** and the result from one or more [measurement](https://ohdsi.github.io/CommonDataModel/cdm54.html#measurement) occurrences. Measurements provide a window into the so-called "internal exposome".
+>
+> Specify one or more schema.org MedicalRiskFactors as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
-
-Specify one or more Medical Risk Factor as  triple here...
 
 (variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
@@ -252,10 +254,10 @@ Specify one or more Medical Risk Factor as  triple here...
 > In a schema.org MedicalObservationalStudy a study subject may have one or more health  condition outcomes. These outcomes include "diseases, injuries, disabilities, disorders and syndromes". Outcomes are, as a rule, more specific than the medical condition(s) that lead to an intervention. Those conditions -- in addition to "diseases, injuries, disabilities, disorders, syndromes" -- include signs, symptoms and test results. In SNOMED-CT medical conditions are more general and outcomes are more specific. [The list of outcomes](https://athena.ohdsi.org/search-terms/terms?conceptClass=Disorder&conceptClass=Clinical+Finding&domain=Condition&vocabulary=SNOMED&invalidReason=Valid&page=1&pageSize=15&query=) in SNOMED-CT is 88,000 concepts long. If the concept for your source variable is not on this list, our platform is able to grow it. You can catch up with [David on Discord](https://discord.com/channels/1283751225958862859/1305477082146410558) to this end.
 >
 > In the OHDSI research paradigm these health conditions correspond to outcome cohorts. In this paradigm entry events for outcome cohorts typically come from the OMOP CDM [condition_occurrence](https://ohdsi.github.io/CommonDataModel/cdm54.html#condition_occurrence) domain.
+>
+> Specify one or more schema.org HealthConditions as a triple here, where provenance is a "type" from [this](https://athena.ohdsi.org/search-terms/terms?vocabulary=Type+Concept&page=1&pageSize=15&query=) controlled vocabulary:
 ```
 <
-
-Specify one or more health condition outcomes as triple here...
 
 (variable name, concept_id, provenance)
 (variable name, concept_id, provenance)
