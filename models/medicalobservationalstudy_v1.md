@@ -1,18 +1,14 @@
 # [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy)
 > [!NOTE] 
-> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, two or more study subjects aka "cohorts" and one or more health condition outcomes.
+> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, one or more study subjects aka "cohorts" depending on the design and one or more health condition outcomes.
 > With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) much as it is represented and explained in the Book of OHDSI.
 
----
 ## Purpose and Objectives
-
+>
 The primary objective of this template is to guide users in documenting Medical Observational Studies consistently across DSWB pathfinders. By standardizing metadata and study elements, this template ensures that:
-
-> 1. **Study Documentation**: Critical study components are clearly defined, making studies easily understood and replicable.
-> 2. **FAIR Principles**: Documentation aligns with the FAIR (Findable, Accessible, Interoperable, and Reusable) principles to support data sharing and reusability.
-> 3. **Cataloging and Discoverability**: Completed study documentation will be included in a searchable catalog, enhancing the discoverability of studies by keywords and facilitating a knowledge graph structure for interconnected research data.
-
----
+1. **Study Documentation**: Critical study components are clearly defined, making studies easily understood and replicable.
+2. **FAIR Principles**: Documentation aligns with the FAIR (Findable, Accessible, Interoperable, and Reusable) principles to support data sharing and reusability.
+3. **Cataloging and Discoverability**: Completed study documentation will be included in a searchable catalog, enhancing the discoverability of studies by keywords and facilitating a knowledge graph structure for interconnected research data.
 
 > [!CAUTION]  
 > There is one caveat. The MedicalObservationalStudy lacks the granularity to describe a population-level estimation study in detail. Specifically, it doesn't capture much of the logic that goes into the construction of study subjects and their health outcomes. 
@@ -111,16 +107,16 @@ Specify here...
 ## 2. StudyDesign
 > [!TIP]
 > In schema.org a study design takes an enumeration called [MedicalObservationalStudyDesign](https://schema.org/MedicalObservationalStudyDesign). Here we are proposing a different enumeration -- one that corresponds to the [several types of population-level estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) detailed in the Book of OHDSI:
-
-> - **Cohort Method Design** *(emulated clinical trial)*: Compares exposure-based cohorts to estimate specific outcomes.
-> - **Self-Controlled Cohort Design**: Compares timepoints within the same cohort to assess exposure-related risks.
-> - **Case-Control Design**: Contrasts cases (with outcome) and controls (without outcome).
-> - **Case-Crossover Design**: Assesses exposure risk by comparing periods within subjects.
-> - **Self-Controlled Case Series Design**: Evaluates risks by comparing individual time periods.
+>
+> 1. [Cohort Method Design](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html#CohortMethod). The cohort method attempts to emulate a randomized clinical trial. (Hernan and Robins 2016) Subjects that are observed to initiate one treatment (the target) are compared to subjects initiating another treatment (the comparator) and are followed for a specific amount of time following treatment initiation.
+> 2. [Self-Controlled Cohort Design](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html#the-self-controlled-cohort-design). The self-controlled cohort (SCC) design (Ryan, Schuemie, and Madigan 2013) compares the rate of outcomes during exposure to the rate of outcomes in the time just prior to the exposure.
+> 3. [Case-Control Design](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html#the-case-control-design). *In the case-control design (Vandenbroucke and Pearce 2012) subjects with the outcome (‘cases’) are compared to subjects without the outcome (‘controls’) in terms of their exposure status. Often, cases and controls are matched on various characteristics such as age and sex.*
+> 4. [Case-Crossover Design](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html#the-case-crossover-design). The case-crossover (Maclure 1991) design evaluates whether the rate of exposure is different at the time of the outcome than at some predefined number of days prior to the outcome.
+> 5. [Self-Controlled Case Series Design](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html#the-self-controlled-case-series-design). The Self-Controlled Case Series (SCCS) design (Farrington 1995; Whitaker et al. 2006) compares the rate of outcomes during exposure to the rate of outcomes during all unexposed time, including before, between, and after exposures.
 ```
 <
 
-Specify here...
+Specify a number from 1 to 5 here...
 
 >
 ```
