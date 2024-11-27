@@ -1,7 +1,12 @@
 # [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy)
 > [!NOTE] 
-> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) has a study design, one or more study subjects aka "cohorts" depending on the design and one or more health condition outcomes.
-> With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) much as it is represented and explained in the Book of OHDSI.
+> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) assesses the effect(s) of interventions on health outcomes between cohorts that are NOT the product of random selection.
+> 
+> An intervention might be a drug, a lifestyle change and/or a public health intervention.
+> 
+> A MedicalObservationalStudy has a study design, one or more study subjects aka "cohorts" depending on the design, and one or more health condition outcomes. The study design is a controlled vocabulary. Each design in this vocabulary tries to mitigate bias in selection by other means.
+>
+> With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) health research much as it is represented and explained in the Book of OHDSI.
 
 ## Purpose and Objectives
 >
