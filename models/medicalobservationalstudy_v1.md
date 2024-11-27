@@ -10,6 +10,8 @@
 
 > [!CAUTION]
 > The schema.org MedicalObservationalStudy is distinct from its [MedicalRiskEstimator](https://schema.org/MedicalRiskEstimator) template which describes studies that predict health outcomes based on patient characteristics like demographic information, disease history, treatment history and a history of external exposures aka the "external exposome".
+> 
+> That being said, both templates structure for analysis research questions and the data you choose to use to answer them.
 
 ## Purpose and Objectives
 >
