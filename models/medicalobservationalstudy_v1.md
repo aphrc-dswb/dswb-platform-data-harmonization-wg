@@ -8,6 +8,9 @@
 >
 > With these ingredients a MedicalObservationalStudy is able to describe [Population-Level Estimation](https://ohdsi.github.io/TheBookOfOhdsi/PopulationLevelEstimation.html) health research much as it is represented and explained in the Book of OHDSI.
 
+> [!CAUTION]
+> The schema.org MedicalObservationalStudy is distinct from its [MedicalRiskEstimator](https://schema.org/MedicalRiskEstimator) template which predicts health outcomes based on patient characteristics like demographic information, disease history, and treatment history.
+
 ## Purpose and Objectives
 >
 The primary objective of this template is to guide users in documenting Medical Observational Studies consistently across DSWB pathfinders. By standardizing metadata and study elements, this template ensures that:
