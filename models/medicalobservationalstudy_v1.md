@@ -1,6 +1,6 @@
 # [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy)
 > [!NOTE] 
-> A schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) assesses the effect(s) of interventions on health outcomes between cohorts that are NOT the product of random selection.
+> Here a schema.org [MedicalObservationalStudy](https://schema.org/MedicalObservationalStudy) serves as an implementation guide for research that assesses the effect(s) of interventions on health outcomes between cohorts that are NOT the product of random selection.
 > 
 > An intervention might be a drug, a lifestyle change and/or a public health intervention.
 > 
