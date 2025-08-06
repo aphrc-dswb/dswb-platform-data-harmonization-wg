@@ -1,0 +1,840 @@
+{
+  "@context": "https://schema.org/",
+  "@id": "https://catalog.elwazi.org/#/datasets",
+  "@type": "Dataset",
+  "name": "Douala General Hospital (DGH)Clinical Tuberculosis Dataset",
+  "description": "This dataset contains clinical and demographic information about patients diagnosed with tuberculosis (TB), including , clinical symptoms, laboratory results, and TB infection locations.",
+  "url": "https://dswb.africa/",
+  "version": "1.0.0",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/publicdomain/zero/1.0",
+  "keywords": [
+    {
+      "@type": "DefinedTerm",
+      "name": "tuberculosis",
+      "inDefinedTermSet": "http://snomed.info/sct",
+      "termCode": "56717001",
+      "description": "A bacterial infection caused by Mycobacterium tuberculosis",
+      "identifier": "https://athena.ohdsi.org/search-terms/terms/434557"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "clinical study",
+      "inDefinedTermSet": "http://id.nlm.nih.gov/mesh/",
+      "termCode": "D000068456",
+      "description": "Research studies that evaluate interventions or exposures on biomedical or health-related outcomes, including interventional and observational studies"
+    } 
+  ],
+      "identifier": {
+        "@id": "https://doi.org/10.1186/s12879-023-08457-3",
+        "@type": "PropertyValue",
+        "propertyID": "https://registry.identifiers.org/registry/doi",
+        "url": "https://doi.org/10.1186/s12879-023-08457-3",
+        "value": "doi:10.1186/s12879-023-08457-3"
+  },
+  "creator": [
+    {
+      "@id": "https://dswb.africa/pathfinder-institutions/",
+      "@type": "Role",
+      "roleName": "Principal Investigator",
+      "creator": {
+        "@id": "https://dswb.africa/pathfinder-institutions/",
+        "@type": "Person",
+        "name": "Prof. Mbatchou Bertrand",
+        "url": "https://dswb.africa/pathfinder-institutions/"
+      }
+      }
+  ],
+  "datePublished": "2025-07-30",
+  "temporalCoverage": "2014-01-01/2025-07-30",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Douala, Cameroon",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.040688,
+      "longitude":9.684468
+    },
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+      "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+    }
+  },
+
+   "includedInDataCatalog": {
+    "@id": "https://catalog.elwazi.org/",
+    "@type": "DataCatalog",
+    "name": "Elwazi Data Catalog"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "TB data export from REDCap",
+      "contentUrl": "https://dswb.africa/downloads/tb_data.xlsx",
+      "encodingFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "datePublished": "2025-07-30"
+    }
+  ],
+
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "uniqueid",
+      "description": "Anonymized unique person identifier",
+       "propertyID": "https://redcap.h3abionet.org/uniqueid"
+    },
+    {
+  "@type": "PropertyValue",
+  "name": "age",
+  "description": "The age of the patient in years at the time they were diagnosed with tuberculosis (TB)",
+  "propertyID": "https://redcap.h3abionet.org/age",
+  "unitCode": "unit:ANN",
+  "unitText": "years",
+  "valueReference": {
+    "@type": "PropertyValue",
+    "propertyID": "http://qudt.org/schema/qudt/datatype",
+    "value": "http://qudt.org/vocab/datatype/Integer"
+  }
+},
+    {
+  "@type": "PropertyValue",
+  "name": "sex",
+  "description": "The gender of the patient as recorded at the time of enrollment",
+  "propertyID": "https://redcap.h3abionet.org/sex",
+  "valueReference": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "http://qudt.org/schema/qudt/datatype",
+      "value": "http://qudt.org/vocab/datatype/String"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Male",
+      "termCode": "8507",
+      "inDefinedTermSet": "https://athena.ohdsi.org/search-terms/terms/8507",
+      "url": "https://athena.ohdsi.org/search-terms/terms/8507"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Female",
+      "termCode": "8532",
+      "inDefinedTermSet": "https://athena.ohdsi.org/search-terms/terms/8532",
+      "url": "https://athena.ohdsi.org/search-terms/terms/8532"
+    }
+  ]
+},     
+  {
+  "@type": "PropertyValue",
+  "name": "year_of_treatment_start",
+  "description": "The year when the patient started their TB treatment",
+  "propertyID": "https://redcap.h3abionet.org/year_of_treatment_start",
+  "unitCode": "unit:ANN",
+  "unitText": "calendar year",
+  "valueReference": {
+    "@type": "PropertyValue",
+    "propertyID": "http://qudt.org/schema/qudt/datatype",
+    "value": "http://qudt.org/vocab/datatype/Integer"
+  }
+},
+ {
+  "@type": "PropertyValue",
+  "name": "location",
+  "description": "General location of the patient or where the TB infection is located",
+  "propertyID": "https://redcap.h3abionet.org/location",
+   "unitText": "text",
+  "valueReference": {
+    "@type": "PropertyValue",
+    "propertyID": "http://qudt.org/schema/qudt/datatype",
+    "value": "http://qudt.org/vocab/datatype/String"
+  }
+},
+    
+ {
+      "@type": "PropertyValue",
+      "name": "TB_v2_localisation",
+      "description": "A more specific or coded location of the TB infection",
+      "propertyID": "https://redcap.h3abionet.org/TB_v2_localisation",
+      "unitText": "text",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "propertyID": "http://qudt.org/schema/qudt/datatype",
+        "value": "http://qudt.org/vocab/datatype/String"
+      }
+    },
+   
+
+    {
+      "@type": "PropertyValue",
+      "name": "occupation",
+      "description": "The patient's occupation",
+      "propertyID": "https://redcap.h3abionet.org/occupation",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "marital_status",
+      "description": "The marital status of the patient",
+      "propertyID": "https://redcap.h3abionet.org/marital_status",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "history_of_tuberculosis",
+      "description": "Indicates whether the patient has a previous history of tuberculosis",
+      "propertyID": "https://redcap.h3abionet.org/history_of_tuberculosis",
+      "unitText": "boolean"
+      
+    },
+{
+  "@type": "PropertyValue",
+  "name": "hiv_status",
+  "description": "HIV status of patient as assessed through testing. Controlled vocabulary includes positive, negative, or unknown.",
+  "propertyID": "https://redcap.h3abionet.org/hiv_status",
+  "valueReference": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "http://qudt.org/schema/qudt/datatype",
+      "value": "http://qudt.org/vocab/datatype/String"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Positive",
+      "termCode": "4013106",
+      "inDefinedTermSet": "http://snomed.info/sct",
+      "url": "http://snomed.info/id/4013106"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Negative",
+      "termCode": "4013105",
+      "inDefinedTermSet": "http://snomed.info/sct",
+      "url": "http://snomed.info/id/4013105"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Unknown",
+      "termCode": "4129922",
+      "inDefinedTermSet": "http://snomed.info/sct",
+      "url": "http://snomed.info/id/261665006"
+    }
+  ]
+},
+
+    {
+      "@type": "PropertyValue",
+      "name": "HTA",
+      "description": "Indicates if the patient has hypertension (high blood pressure)",
+      "propertyID": "https://redcap.h3abionet.org/HTA",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "diabetes",
+      "description": "Indicates if the patient has diabetes",
+      "propertyID": "https://redcap.h3abionet.org/diabetes",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chronic_kidney_disease",
+      "description": "Indicates if the patient has chronic kidney disease",
+      "propertyID": "https://redcap.h3abionet.org/chronic_kidney_disease",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ARV_treatment",
+      "description": "Indicates if the patient is receiving antiretroviral treatment",
+      "propertyID": "https://redcap.h3abionet.org/ARV_treatment",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tobacco_consumption",
+      "description": "Indicates the patient's tobacco use status",
+      "propertyID": "https://redcap.h3abionet.org/tobacco_consumption",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "alcohol_consumption",
+      "description": "Indicates the patient's alcohol use status",
+      "propertyID": "https://redcap.h3abionet.org/alcohol_consumption",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "consumption_of_other_drugs",
+      "description": "Indicates the patient's use of other drugs",
+      "propertyID": "https://redcap.h3abionet.org/consumption_of_other_drugs",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nocturnal_excessive_sweating",
+      "description": "Indicates if the patient experiences night sweats",
+      "propertyID": "https://redcap.h3abionet.org/nocturnal_excessive_sweating",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "anorexia",
+      "description": "Indicates if the patient has anorexia",
+      "propertyID": "https://redcap.h3abionet.org/anorexia",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "weight_loss",
+      "description": "Indicates if the patient has experienced significant weight loss",
+      "propertyID": "https://redcap.h3abionet.org/weight_loss",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "asthenia",
+      "description": "Indicates if the patient experiences general weakness",
+      "propertyID": "https://redcap.h3abionet.org/asthenia",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "fever",
+      "description": "Indicates if the patient has a fever",
+      "propertyID": "https://redcap.h3abionet.org/fever",
+      "unitText": "boolean"
+ 
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "cough",
+      "description": "Indicates if the patient has a cough",
+      "propertyID": "https://redcap.h3abionet.org/cough",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "expectoration",
+      "description": "Indicates if the patient produces sputum",
+      "propertyID": "https://redcap.h3abionet.org/expectoration",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hemoptysis",
+      "description": "Indicates if the patient has coughing up blood",
+      "propertyID": "https://redcap.h3abionet.org/hemoptysis",
+      "unitText": "boolean"
+  
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "dyspnea",
+      "description": "Indicates if the patient experiences difficulty breathing",
+      "propertyID": "https://redcap.h3abionet.org/dyspnea",
+      "unitText": "boolean"
+
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chest_pain",
+      "description": "Indicates if the patient experiences chest pain",
+      "propertyID": "https://redcap.h3abionet.org/chest_pain",
+      "unitText": "boolean"
+  
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Others",
+      "description": "Any other relevant information not covered by other variables",
+      "propertyID": "https://redcap.h3abionet.org/Others",
+      "unitText": "text"
+ 
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "current_weight",
+      "description": "The current weight of the patient",
+      "propertyID": "https://redcap.h3abionet.org/current_weight",
+      "unitText": "kilograms"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "leukocytes",
+      "description": "The count of white blood cells in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/leukocytes",
+      "unitText": "cells per microliter"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "neutrophils",
+      "description": "The count of neutrophils in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/neutrophils",
+      "unitText": "cells per microliter"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "lymphocytes",
+      "description": "The count of lymphocytes in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/lymphocytes",
+      "unitText": "cells per microliter"
+      
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "eosinophils",
+      "description": "The count of eosinophils in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/eosinophils",
+      "unitText": "cells per microliter"
+      
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "monocytes",
+      "description": "The count of monocytes in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/monocytes",
+      "unitText": "cells per microliter"
+ 
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "basophils",
+      "description": "The count of basophils in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/basophils",
+      "unitText": "cells per microliter"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pads",
+      "description": "The count of platelets in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/pads",
+      "unitText": "cells per microliter"
+ 
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hemoglobin",
+      "description": "The hemoglobin level in the patient's blood",
+      "propertyID": "https://redcap.h3abionet.org/hemoglobin",
+      "unitText": "grams per deciliter"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "VGM",
+      "description": "The average volume of red blood cells",
+      "propertyID": "https://redcap.h3abionet.org/VGM",
+      "unitText": "femtoliters"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TCMH",
+      "description": "The average concentration of hemoglobin in red blood cells",
+      "propertyID": "https://redcap.h3abionet.org/TCMH",
+      "unitText": "picograms"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CRP",
+      "description": "The level of C-reactive protein in the patient's blood indicates inflammation",
+      "propertyID": "https://redcap.h3abionet.org/CRP",
+      "unitText": "milligrams per liter"
+
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "VS",
+      "description": "The rate at which red blood cells sediment in a period of one hour",
+      "propertyID": "https://redcap.h3abionet.org/VS",
+      "unitText": "millimeters per hour"
+   
+    },
+
+{
+  "@type": "PropertyValue",
+  "name": "urea",
+  "description": "The urea level in the patient's blood, measured to assess kidney function",
+  "propertyID": "https://athena.ohdsi.org/search-terms/terms/3009810",
+  "unitCode": "mmol/L",
+  "unitText": "millimoles per liter",
+  "valueReference": {
+    "@type": "PropertyValue",
+    "propertyID": "http://qudt.org/schema/qudt/datatype",
+    "value": "http://qudt.org/vocab/datatype/Float"
+  }
+},
+
+    {
+      "@type": "PropertyValue",
+      "name": "creatinine",
+      "description": "The level of creatinine in the patient's blood indicates kidney function",
+      "propertyID": "https://redcap.h3abionet.org/creatinine",
+      "unitText": "milligrams per deciliter"
+ 
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ALAT_SGPT",
+      "description": "The level of alanine transaminase in the patient's blood indicates liver function",
+      "propertyID": "https://redcap.h3abionet.org/ALAT_SGPT",
+      "unitText": "units per liter"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ASAT_SGOT",
+      "description": "The level of aspartate transaminase in the patient's blood indicates liver function",
+      "propertyID": "https://redcap.h3abionet.org/ASAT_SGOT",
+      "unitText": "units per liter"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "hepatitis_serology",
+      "description": "Results of hepatitis serology tests",
+      "propertyID": "https://redcap.h3abionet.org/hepatitis_serology",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CD4_count",
+      "description": "The count of CD4 cells in the patient's blood indicates immune function",
+      "propertyID": "https://redcap.h3abionet.org/CD4_count",
+      "unitText": "cells per microliter"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "search_for_AFB",
+      "description": "Results of the Bacillus Acid-Resistant (BAAR) test",
+      "propertyID": "https://redcap.h3abionet.org/search_for_AFB",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AFB_collection",
+      "description": "Indicates if a sample was taken for the BAAR test",
+      "propertyID": "https://redcap.h3abionet.org/AFB_collection",
+      "unitText": "boolean"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "other_samples",
+      "description": "Indicates if other samples were taken",
+      "propertyID": "https://redcap.h3abionet.org/other_samples",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PCR",
+      "description": "The site from which a Polymerase Chain Reaction (PCR) test sample was taken",
+      "propertyID": "https://redcap.h3abionet.org/PCR",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pleural_puncture",
+      "description": "Pleural puncture",
+      "propertyID": "https://redcap.h3abionet.org/pleural_puncture",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "macroscopic_appearance_of_pleural_fluid",
+      "description": "Macroscopic appearance of pleural fluid of patient",
+      "propertyID": "https://redcap.h3abionet.org/macroscopic_appearance_of_pleural_fluid",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pleural_proteins_g/L",
+      "description": "The level of proteins in the pleural fluid, measured in grams per liter",
+      "propertyID": "https://redcap.h3abionet.org/pleural_proteins_g_L",
+      "unitText": "grams per liter"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pleural_leukocytes/mm3",
+      "description": "The count of leukocytes in the pleural fluid, measured in cubic millimeters",
+      "propertyID": "https://redcap.h3abionet.org/pleural_leukocytes_mm3",
+      "unitText": "cells per cubic millimeter"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pleural_lymphocytes_%",
+      "description": "The percentage of lymphocytes in the pleural fluid",
+      "propertyID": "https://redcap.h3abionet.org/Pleural_lymphocytes_%",
+      "unitText": "percentage"
+      
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "appearance_of_ascites_fluid",
+      "description": "The macroscopic appearance of the ascitic fluid",
+      "propertyID": "https://redcap.h3abionet.org/appearance_of_ascites_fluid",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ascitic_fluid_analysis",
+      "description": "Results of the analysis of the ascitic fluid",
+      "propertyID": "https://redcap.h3abionet.org/ascitic_fluid_analysis",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ascites_proteins_g/L",
+      "description": "The level of proteins in the ascitic fluid, measured in grams per liter",
+      "propertyID": "https://redcap.h3abionet.org/ascites_proteins_g_L",
+      "unitText": "grams per liter"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ascites_leukocytes_mm3",
+      "description": "The count of leukocytes in the ascitic fluid, measured in cubic millimeters",
+      "propertyID": "https://redcap.h3abionet.org/ascites_leukocytes_mm3",
+      "unitText": "cells per cubic millimeter"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Lymphocytes ascites (%)",
+      "description": "The percentage of lymphocytes in the ascitic fluid",
+      "propertyID": "https://redcap.h3abionet.org/Lymphocytes_ascites_%",
+      "unitText": "percentage"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "appearance_of_cerebrospinal_fluid",
+      "description": "The appearance of cerebrospinal fluid",
+      "propertyID": "https://redcap.h3abionet.org/appearance_of_cerebrospinal_fluid",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CSF_leukocytes_mm3",
+      "description": "CSF leukocytes in millimeters cube",
+      "propertyID": "https://redcap.h3abionet.org/CSF_leukocytes_mm3",
+      "unitText": "cells per cubic millimeter"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CSF_lymphocytes_%",
+      "description": "CSF lymphocytes in percentage",
+      "propertyID": "https://redcap.h3abionet.org/CSF_lymphocytes_%",
+      "unitText": "percentage"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pleural_TB",
+      "description": "Pleural tuberculosis",
+      "propertyID": "https://redcap.h3abionet.org/pleural_TB",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "peripheral_lymph_node",
+      "description": "Peripheral lymph node",
+      "propertyID": "https://redcap.h3abionet.org/peripheral_lymph_node",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pott's_disease",
+      "description": "Pott's disease",
+      "propertyID": "https://redcap.h3abionet.org/potts_disease",
+      "unitText": "boolean"
+   
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "peritoneal",
+      "description": "Peritoneal",
+      "propertyID": "https://redcap.h3abionet.org/peritoneal",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "neuromeningeal",
+      "description": "Neuromeningeal",
+      "propertyID": "https://redcap.h3abionet.org/neuromeningeal",
+      "unitText": "boolean"
+    
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pericardial",
+      "description": "Pericardial",
+      "propertyID": "https://redcap.h3abionet.org/pericardial",
+      "unitText": "boolean"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "other_body_locations",
+      "description": "Other body locations",
+      "propertyID": "https://redcap.h3abionet.org/other_body_locations",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "other_locations",
+      "description": "Other locations",
+      "propertyID": "https://redcap.h3abionet.org/other_locations",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "number_of_sites_reached",
+      "description": "Number of sites reached",
+      "propertyID": "https://redcap.h3abionet.org/number_of_sites_reached",
+      "unitText": "integer"
+     
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "spitting_at_the_end_of_the_2nd_month",
+      "description": "Spitting at the end of the 2nd month",
+      "propertyID": "https://redcap.h3abionet.org/spitting_at_the_end_of_the_2nd_month",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "treatment_result",
+      "description": "Treatment result that is either positive, negative or not done",
+      "propertyID": "https://redcap.h3abionet.org/treatment_result",
+      "unitText": "text",
+      "valueReference": [
+        {
+          "@type": "CategoryCode",
+          "name": "Positive",
+          "codeValue": "positive",
+          "description": "Treatment was successful",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "@id": "https://redcap.h3abionet.org/vocab/treatment_result",
+            "name": "Treatment Result Vocabulary",
+            "description": "Controlled vocabulary for treatment outcomes",
+            "identifier": "45884084"
+          }
+        },
+        {
+          "@type": "CategoryCode",
+          "name": "Negative",
+          "codeValue": "negative",
+          "description": "Treatment was not successful",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "@id": "https://redcap.h3abionet.org/vocab/treatment_result",
+            "name": "Treatment Result Vocabulary",
+            "description": "Controlled vocabulary for treatment outcomes",
+            "identifier": "45878583"
+          }
+        },
+        {
+          "@type": "CategoryCode",
+          "name": "Not Done",
+          "codeValue": "not_done",
+          "description": "Treatment result not recorded",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "@id": "https://redcap.h3abionet.org/vocab/treatment_result",
+            "name": "Treatment Result Vocabulary",
+            "description": "Controlled vocabulary for treatment outcomes",
+            "identifier": "45878559"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "age_category",
+      "description": "Age category of patient",
+      "propertyID": "https://redcap.h3abionet.org/age_category",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "treatment_outcome_therapeutic_success",
+      "description": "Treatment outcome, therapeutic success",
+      "propertyID": "https://redcap.h3abionet.org/treatment_outcome_therapeutic_success",
+      "unitText": "boolean"
+
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "clinical_category_2",
+      "description": "Clinical category_2, that is, a new case or reprocessing",
+      "propertyID": "https://redcap.h3abionet.org/clinical_category_2",
+      "unitText": "text",
+      "valueReference": [
+        {
+          "@type": "CategoryCode",
+          "name": "New Case",
+          "codeValue": "new_case",
+          "description": "First-time TB diagnosis",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "@id": "http://snomed.info/sct",
+            "name": "Clinical Category 2 Vocabulary",
+            "description": "Controlled vocabulary for clinical category (new case or reprocessing)"
+          }
+        },
+        {
+          "@type": "CategoryCode",
+          "name": "Reprocessing",
+          "codeValue": "reprocessing",
+          "description": "Subsequent TB treatment or diagnosis",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "@id": "http://snomed.info/sct",
+            "name": "Clinical Category 2 Vocabulary",
+            "description": "Controlled vocabulary for clinical category (new case or reprocessing)"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "chronic_kidney_disease_in_2_categories",
+      "description": "Chronic kidney disease in category_2",
+      "propertyID": "https://redcap.h3abionet.org/chronic_kidney_disease_in_2_categories",
+      "unitText": "text"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "smoking_in_2_categories",
+      "description": "Smoking in category_2",
+      "propertyID": "https://redcap.h3abionet.org/smoking_in_2_categories",
+      "unitText": "text"
+    }
+  ]
+}
