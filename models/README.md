@@ -9,7 +9,7 @@ This repository contains datasets, documentation, scripts, and reflective notes 
 #### `datasets/`
 Schema.org-compliant JSON-LD translations of harmonized codebooks following [science-on-schema.org guidelines](https://github.com/ESIPFed/science-on-schema.org/blob/main/guides/Dataset.md).
 
-- `tb_datasetV1.jsonld`  
+- `tb_dataset.jsonld`  
   Translated representation of the tuberculosis (TB) dataset, derived from the DGH harmonized codebook.
 
 - `DGH_TB_Codebook.xlsx`  
