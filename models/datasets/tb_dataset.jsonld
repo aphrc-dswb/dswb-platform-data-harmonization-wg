@@ -106,9 +106,7 @@
   "valueReference": [
     {
       "@type": "PropertyValue",
-      "propertyID": "http://qudt.org/schema/qudt/datatype",
-      "name": "Gender Controlled Vocabulary",
-      "value": "http://qudt.org/vocab/datatype/Text"
+      "name": "Gender Controlled Vocabulary"
     },
     {
       "@type": "DefinedTerm",
