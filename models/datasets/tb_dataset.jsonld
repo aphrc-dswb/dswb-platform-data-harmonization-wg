@@ -102,11 +102,13 @@
   "name": "sex",
   "description": "The gender of the patient as recorded at the time of enrollment",
   "propertyID": "https://redcap.h3abionet.org/sex",
+  "qudt:dataType": "https://schema.org/Text",
   "valueReference": [
     {
       "@type": "PropertyValue",
       "propertyID": "http://qudt.org/schema/qudt/datatype",
-      "value": "http://qudt.org/vocab/datatype/String"
+      "name": "Gender Controlled Vocabulary",
+      "value": "http://qudt.org/vocab/datatype/Text"
     },
     {
       "@type": "DefinedTerm",
@@ -124,6 +126,7 @@
     }
   ]
 },     
+
   {
   "@type": "PropertyValue",
   "name": "year_of_treatment_start",
