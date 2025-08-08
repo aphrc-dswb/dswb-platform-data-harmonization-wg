@@ -1,18 +1,19 @@
 {
-"@context": "https://schema.org",
+  "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "Survey Dataset",
   "description": "A dataset with categorical variables.",
   "variableMeasured": [
-    {
-      "@type": "PropertyValue",
-      "name": "Degree",
-      "description": "Self-reported degree.",
-      "valueReference": {
-          "@type": "DefinedTerm",
-          "inDefinedTermSet": {
-            "@type": "DefinedTermSet",
-            "hasDefinedTerm": ["highschool", "college"]
+  {
+    "@type": "PropertyValue",
+    "name": "Degree",
+    "description": "Self-reported degree.",
+    "valueReference": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "hasDefinedTerm": ["highschool", "college"]
+        }
       }
     }
   ]
