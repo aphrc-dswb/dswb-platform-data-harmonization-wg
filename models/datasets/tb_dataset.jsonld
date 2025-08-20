@@ -188,38 +188,42 @@
       
     },
 {
-  "@type": "PropertyValue",
+
+  "@type": "DefinedTerm",
+ "@id": "urn:example:ex_variable_hiv_status",
+  "identifier": "https://redcap.h3abionet.org/hiv_status",
   "name": "hiv_status",
+  "alternateName": "HIV status of patient",
   "description": "HIV status of patient as assessed through testing. Controlled vocabulary includes positive, negative, or unknown.",
-  "propertyID": "https://redcap.h3abionet.org/hiv_status",
-  "valueReference": [
-    {
-      "@type": "PropertyValue",
-      "propertyID": "http://qudt.org/schema/qudt/datatype",
-      "value": "http://qudt.org/vocab/datatype/String"
-    },
-    {
-      "@type": "DefinedTerm",
-      "name": "Positive",
-      "termCode": "4013106",
-      "inDefinedTermSet": "http://snomed.info/sct",
-      "url": "http://snomed.info/id/4013106"
-    },
-    {
-      "@type": "DefinedTerm",
-      "name": "Negative",
-      "termCode": "4013105",
-      "inDefinedTermSet": "http://snomed.info/sct",
-      "url": "http://snomed.info/id/4013105"
-    },
-    {
-      "@type": "DefinedTerm",
-      "name": "Unknown",
-      "termCode": "4129922",
-      "inDefinedTermSet": "http://snomed.info/sct",
-      "url": "http://snomed.info/id/261665006"
-    }
-  ]
+  "qudt:dataType": "https://schema.org/Text",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://redcap.h3abionet.org/vocab/hiv_status",
+    "name": "HIV status controlled vocabulary",
+    "hasDefinedTerm": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Positive",
+        "termCode": "4013106",
+        "inDefinedTermSet": "http://snomed.info/sct",
+        "url": "http://snomed.info/id/4013106"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Negative",
+        "termCode": "4013105",
+        "inDefinedTermSet": "http://snomed.info/sct",
+        "url": "http://snomed.info/id/4013105"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Unknown",
+        "termCode": "261665006",
+        "inDefinedTermSet": "http://snomed.info/sct",
+        "url": "http://snomed.info/id/261665006"
+      }
+    ]
+  }
 },
 
     {
@@ -839,3 +843,4 @@
     }
   ]
 }
+
