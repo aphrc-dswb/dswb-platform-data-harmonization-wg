@@ -133,9 +133,9 @@
       "name": "year_of_treatment_start",
       "description": "The year when the patient started their TB treatment",
       "propertyID": "https://redcap.h3abionet.org/year_of_treatment_start",
-      "qudt:dataType": "https://schema.org/Integer",
-      "unitCode": "unit:ANN",
-      "unitText": "calendar year"
+      "qudt:dataType": "xsd:integer",
+      "qudt:quantityKind": "quantitykind:Time",
+      "qudt:unit": "unit:ANN"
     },
     {
       "@type": "PropertyValue",
@@ -356,7 +356,9 @@
       "name": "current_weight",
       "description": "The current weight of the patient",
       "propertyID": "https://redcap.h3abionet.org/current_weight",
-      "unitText": "kilograms"
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:Mass",
+      "qudt:unit": "unit:KiloGM"
      
     },
     {
@@ -364,7 +366,9 @@
       "name": "leukocytes",
       "description": "The count of white blood cells in the patient's blood",
       "propertyID": "https://redcap.h3abionet.org/leukocytes",
-      "unitText": "cells per microliter"
+      "qudt:dataType": "xsd:integer",
+      "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+      "qudt:unit": "unit:CEL/MM3"
     
     },
     {
@@ -372,49 +376,57 @@
       "name": "neutrophils",
       "description": "The count of neutrophils in the patient's blood",
       "propertyID": "https://redcap.h3abionet.org/neutrophils",
-      "unitText": "cells per microliter"
+      "qudt:dataType": "xsd:integer",
+      "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+      "qudt:unit": "unit:CEL/MM"
    
     },
     {
-      "@type": "PropertyValue",
-      "name": "lymphocytes",
-      "description": "The count of lymphocytes in the patient's blood",
-      "propertyID": "https://redcap.h3abionet.org/lymphocytes",
-      "unitText": "cells per microliter"
-      
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "eosinophils",
-      "description": "The count of eosinophils in the patient's blood",
-      "propertyID": "https://redcap.h3abionet.org/eosinophils",
-      "unitText": "cells per microliter"
-      
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "monocytes",
-      "description": "The count of monocytes in the patient's blood",
-      "propertyID": "https://redcap.h3abionet.org/monocytes",
-      "unitText": "cells per microliter"
- 
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "basophils",
-      "description": "The count of basophils in the patient's blood",
-      "propertyID": "https://redcap.h3abionet.org/basophils",
-      "unitText": "cells per microliter"
-     
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "pads",
-      "description": "The count of platelets in the patient's blood",
-      "propertyID": "https://redcap.h3abionet.org/pads",
-      "unitText": "cells per microliter"
- 
-    },
+  "@type": "PropertyValue",
+  "name": "lymphocytes",
+  "description": "The count of lymphocytes in the patient's blood",
+  "propertyID": "https://redcap.h3abionet.org/lymphocytes",
+  "qudt:dataType": "xsd:integer",
+  "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+  "qudt:unit": "unit:CEL/MM3"
+},
+{
+  "@type": "PropertyValue",
+  "name": "eosinophils",
+  "description": "The count of eosinophils in the patient's blood",
+  "propertyID": "https://redcap.h3abionet.org/eosinophils",
+  "qudt:dataType": "xsd:integer",
+  "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+  "qudt:unit": "unit:CEL/MM3"
+},
+{
+  "@type": "PropertyValue",
+  "name": "monocytes",
+  "description": "The count of monocytes in the patient's blood",
+  "propertyID": "https://redcap.h3abionet.org/monocytes",
+  "qudt:dataType": "xsd:integer",
+  "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+  "qudt:unit": "unit:CEL/MM3"
+},
+{
+  "@type": "PropertyValue",
+  "name": "basophils",
+  "description": "The count of basophils in the patient's blood",
+  "propertyID": "https://redcap.h3abionet.org/basophils",
+  "qudt:dataType": "xsd:integer",
+  "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+  "qudt:unit": "unit:CEL/MM3"
+},
+{
+  "@type": "PropertyValue",
+  "name": "pads",
+  "description": "The count of platelets in the patient's blood",
+  "propertyID": "https://redcap.h3abionet.org/pads",
+  "qudt:dataType": "xsd:integer",
+  "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+  "qudt:unit": "unit:CEL/MM3"
+},
+
     {
       "@type": "PropertyValue",
       "name": "hemoglobin",
@@ -425,20 +437,24 @@
       "qudt:dataType": "xsd:decimal"
    
     },
-    {
-      "@type": "PropertyValue",
-      "name": "VGM",
-      "description": "The average volume of red blood cells",
-      "propertyID": "https://redcap.h3abionet.org/VGM",
-      "unitText": "femtoliters"
-   
-    },
+   {
+  "@type": "PropertyValue",
+  "name": "VGM",
+  "description": "The average volume of red blood cells",
+  "propertyID": "https://redcap.h3abionet.org/VGM",
+  "qudt:dataType": "xsd:decimal",
+  "qudt:quantityKind": "quantitykind:Volume",
+  "qudt:unit": "unit:FL"
+},
+
     {
       "@type": "PropertyValue",
       "name": "TCMH",
       "description": "The average concentration of hemoglobin in red blood cells",
       "propertyID": "https://redcap.h3abionet.org/TCMH",
-      "unitText": "picograms"
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:HemoglobinMassPerVolume",
+      "qudt:unit": "unit:PG"
     
     },
     {
@@ -448,16 +464,19 @@
       "propertyID": "https://redcap.h3abionet.org/CRP",
       "qudt:dataType": "xsd:decimal",
       "qudt:quantityKind": "quantitykind:CReactiveProteinMassPerVolume",
-      "qudt:unit": "unit:MG-PER-L     
+      "qudt:unit": "unit:MG-PER-L" 
+         
     },
     {
-      "@type": "PropertyValue",
-      "name": "VS",
-      "description": "The rate at which red blood cells sediment in a period of one hour",
-      "propertyID": "https://redcap.h3abionet.org/VS",
-      "unitText": "millimeters per hour"
-   
-    },
+  "@type": "PropertyValue",
+  "name": "VS",
+  "description": "The rate at which red blood cells sediment in a period of one hour",
+  "propertyID": "https://redcap.h3abionet.org/VS",
+  "qudt:dataType": "xsd:decimal",
+  "qudt:quantityKind": "quantitykind:Velocity",
+  "qudt:unit": "unit:MM-PER-HR"
+},
+
 
 {
   "@type": "PropertyValue",
@@ -568,7 +587,7 @@
       "propertyID": "https://redcap.h3abionet.org/pleural_proteins_g_L",
       "qudt:dataType": "xsd:decimal",
      "qudt:quantityKind": "quantitykind:MassConcentration",
-     "qudt:unit": "unit:G_PER_L
+     "qudt:unit": "unit:G_PER_L"
     
     },
     {
@@ -612,7 +631,7 @@
       "propertyID": "https://redcap.h3abionet.org/ascites_proteins_g_L",
        "qudt:dataType": "xsd:decimal",
       "qudt:quantityKind": "quantitykind:Mass",
-      "qudt:unit": "unit:G_PER_L
+      "qudt:unit": "unit:G_PER_L"
    
     },
     {
@@ -622,7 +641,7 @@
       "propertyID": "https://redcap.h3abionet.org/ascites_leukocytes_mm3",
       "qudt:dataType": "xsd:decimal",
      "qudt:quantityKind": "quantitykind:AmountOfSubstance",
-     "qudt:unit": "unit:CELLS_PER_MM3
+     "qudt:unit": "unit:CELLS_PER_MM3"
      
     },
     {
@@ -851,6 +870,7 @@
     }
   ]
 }
+
 
 
 
