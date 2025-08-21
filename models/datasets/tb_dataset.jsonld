@@ -89,13 +89,9 @@
       "name": "age",
       "description": "The age of the patient in years at the time they were diagnosed with tuberculosis (TB)",
       "propertyID": "https://redcap.h3abionet.org/age",
+      "qudt:dataType": "https://schema.org/Integer",
       "unitCode": "unit:ANN",
-      "unitText": "years",
-      "valueReference": {
-        "@type": "PropertyValue",
-        "propertyID": "http://qudt.org/schema/qudt/datatype",
-        "value": "http://qudt.org/vocab/datatype/Integer"
-      }
+      "unitText": "years"
     },
     {
       "@type": "PropertyValue",
@@ -124,42 +120,28 @@
         }
       }
     },     
-  {
-    "@type": "PropertyValue",
-    "name": "year_of_treatment_start",
-    "description": "The year when the patient started their TB treatment",
-    "propertyID": "https://redcap.h3abionet.org/year_of_treatment_start",
-    "unitCode": "unit:ANN",
-    "unitText": "calendar year",
-    "valueReference": {
+    {
       "@type": "PropertyValue",
-      "propertyID": "http://qudt.org/schema/qudt/datatype",
-      "value": "http://qudt.org/vocab/datatype/Integer"
-    }
-  },
-  {
-    "@type": "PropertyValue",
-    "name": "location",
-    "description": "General location of the patient or where the TB infection is located",
-    "propertyID": "https://redcap.h3abionet.org/location",
-     "unitText": "text",
-    "valueReference": {
+      "name": "year_of_treatment_start",
+      "description": "The year when the patient started their TB treatment",
+      "propertyID": "https://redcap.h3abionet.org/year_of_treatment_start",
+      "qudt:dataType": "https://schema.org/Integer",
+      "unitCode": "unit:ANN",
+      "unitText": "calendar year"
+    },
+    {
       "@type": "PropertyValue",
-      "propertyID": "http://qudt.org/schema/qudt/datatype",
-      "value": "http://qudt.org/vocab/datatype/String"
-    }
-  },
- {
+      "name": "location",
+      "description": "General location of the patient or where the TB infection is located",
+      "propertyID": "https://redcap.h3abionet.org/location",
+      "qudt:dataType": "https://schema.org/String"
+    },
+    {
       "@type": "PropertyValue",
       "name": "TB_v2_localisation",
       "description": "A more specific or coded location of the TB infection",
       "propertyID": "https://redcap.h3abionet.org/TB_v2_localisation",
-      "unitText": "text",
-      "valueReference": {
-        "@type": "PropertyValue",
-        "propertyID": "http://qudt.org/schema/qudt/datatype",
-        "value": "http://qudt.org/vocab/datatype/String"
-      }
+      "qudt:dataType": "https://schema.org/String"
     },
    
 
@@ -835,6 +817,7 @@
     }
   ]
 }
+
 
 
 
