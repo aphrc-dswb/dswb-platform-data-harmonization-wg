@@ -89,9 +89,8 @@
       "name": "age",
       "description": "The age of the patient in years at the time they were diagnosed with tuberculosis (TB)",
       "propertyID": "https://redcap.h3abionet.org/age",
-      "qudt:dataType": "https://schema.org/Integer",
-      "unitCode": "unit:ANN",
-      "unitText": "years"
+      "qudt:dataType": "xsd:integer",
+      "qudt:unit": "unit:Year"
     },
     {
       "@type": "PropertyValue",
@@ -451,14 +450,10 @@
   "name": "urea",
   "description": "The urea level in the patient's blood, measured to assess kidney function",
   "propertyID": "https://athena.ohdsi.org/search-terms/terms/3009810",
-  "unitCode": "mmol/L",
-  "unitText": "millimoles per liter",
-  "valueReference": {
-    "@type": "PropertyValue",
-    "propertyID": "http://qudt.org/schema/qudt/datatype",
-    "value": "http://qudt.org/vocab/datatype/Float"
-  }
+  "qudt:dataType": "xsd:float",
+  "qudt:unit": "unit:MilliMOL-PER-L"
 },
+
 
     {
       "@type": "PropertyValue",
@@ -817,6 +812,7 @@
     }
   ]
 }
+
 
 
 
