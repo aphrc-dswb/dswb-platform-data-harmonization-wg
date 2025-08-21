@@ -85,72 +85,70 @@
        "propertyID": "https://redcap.h3abionet.org/uniqueid"
     },
     {
-  "@type": "PropertyValue",
-  "name": "age",
-  "description": "The age of the patient in years at the time they were diagnosed with tuberculosis (TB)",
-  "propertyID": "https://redcap.h3abionet.org/age",
-  "unitCode": "unit:ANN",
-  "unitText": "years",
-  "valueReference": {
-    "@type": "PropertyValue",
-    "propertyID": "http://qudt.org/schema/qudt/datatype",
-    "value": "http://qudt.org/vocab/datatype/Integer"
-  }
-},
-    {
-  "@type": "PropertyValue",
-  "name": "sex",
-  "description": "The gender of the patient as recorded at the time of enrollment",
-  "propertyID": "https://redcap.h3abionet.org/sex",
-  "qudt:dataType": "https://schema.org/Text",
-  "valueReference": [
+      "@type": "PropertyValue",
+      "name": "age",
+      "description": "The age of the patient in years at the time they were diagnosed with tuberculosis (TB)",
+      "propertyID": "https://redcap.h3abionet.org/age",
+      "unitCode": "unit:ANN",
+      "unitText": "years",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "propertyID": "http://qudt.org/schema/qudt/datatype",
+        "value": "http://qudt.org/vocab/datatype/Integer"
+      }
+    },
     {
       "@type": "PropertyValue",
-      "name": "Gender Controlled Vocabulary"
-    },
-    {
-      "@type": "DefinedTerm",
-      "name": "Male",
-      "termCode": "8507",
-      "inDefinedTermSet": "https://athena.ohdsi.org/search-terms/terms/8507",
-      "url": "https://athena.ohdsi.org/search-terms/terms/8507"
-    },
-    {
-      "@type": "DefinedTerm",
-      "name": "Female",
-      "termCode": "8532",
-      "inDefinedTermSet": "https://athena.ohdsi.org/search-terms/terms/8532",
-      "url": "https://athena.ohdsi.org/search-terms/terms/8532"
-    }
-  ]
-},     
-
+      "name": "sex",
+      "description": "The gender of the patient as recorded at the time of enrollment",
+      "propertyID": "https://redcap.h3abionet.org/sex",
+      "qudt:dataType": "https://schema.org/Text",
+      "valueReference": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "hasDefinedTerm": [
+            {
+              "@type": "DefinedTerm",
+              "name": "Male",
+              "termCode": "8507",
+              "url": "https://athena.ohdsi.org/search-terms/terms/8507"
+            },
+            {
+              "@type": "DefinedTerm",
+              "name": "Female",
+              "termCode": "8532",
+              "url": "https://athena.ohdsi.org/search-terms/terms/8532"
+            }
+          ]
+        }
+      }
+    },     
   {
-  "@type": "PropertyValue",
-  "name": "year_of_treatment_start",
-  "description": "The year when the patient started their TB treatment",
-  "propertyID": "https://redcap.h3abionet.org/year_of_treatment_start",
-  "unitCode": "unit:ANN",
-  "unitText": "calendar year",
-  "valueReference": {
     "@type": "PropertyValue",
-    "propertyID": "http://qudt.org/schema/qudt/datatype",
-    "value": "http://qudt.org/vocab/datatype/Integer"
-  }
-},
- {
-  "@type": "PropertyValue",
-  "name": "location",
-  "description": "General location of the patient or where the TB infection is located",
-  "propertyID": "https://redcap.h3abionet.org/location",
-   "unitText": "text",
-  "valueReference": {
+    "name": "year_of_treatment_start",
+    "description": "The year when the patient started their TB treatment",
+    "propertyID": "https://redcap.h3abionet.org/year_of_treatment_start",
+    "unitCode": "unit:ANN",
+    "unitText": "calendar year",
+    "valueReference": {
+      "@type": "PropertyValue",
+      "propertyID": "http://qudt.org/schema/qudt/datatype",
+      "value": "http://qudt.org/vocab/datatype/Integer"
+    }
+  },
+  {
     "@type": "PropertyValue",
-    "propertyID": "http://qudt.org/schema/qudt/datatype",
-    "value": "http://qudt.org/vocab/datatype/String"
-  }
-},
-    
+    "name": "location",
+    "description": "General location of the patient or where the TB infection is located",
+    "propertyID": "https://redcap.h3abionet.org/location",
+     "unitText": "text",
+    "valueReference": {
+      "@type": "PropertyValue",
+      "propertyID": "http://qudt.org/schema/qudt/datatype",
+      "value": "http://qudt.org/vocab/datatype/String"
+    }
+  },
  {
       "@type": "PropertyValue",
       "name": "TB_v2_localisation",
@@ -193,46 +191,33 @@
       "alternateName": "HIV status of patient",
       "description": "HIV status of patient as assessed through testing. Controlled vocabulary includes positive, negative, or unknown.",
       "qudt:dataType": "https://schema.org/Text",
-    },
-{
-
-  "@type": "DefinedTerm",
- "@id": "urn:example:ex_variable_hiv_status",
-  "identifier": "https://redcap.h3abionet.org/hiv_status",
-  "name": "hiv_status",
-  "alternateName": "HIV status of patient",
-  "description": "HIV status of patient as assessed through testing. Controlled vocabulary includes positive, negative, or unknown.",
-  "qudt:dataType": "https://schema.org/Text",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "@id": "https://redcap.h3abionet.org/vocab/hiv_status",
-    "name": "HIV status controlled vocabulary",
-    "hasDefinedTerm": [
-      {
+      "valueReference": {
         "@type": "DefinedTerm",
-        "name": "Positive",
-        "termCode": "4013106",
-        "inDefinedTermSet": "http://snomed.info/sct",
-        "url": "http://snomed.info/id/4013106"
-      },
-      {
-        "@type": "DefinedTerm",
-        "name": "Negative",
-        "termCode": "4013105",
-        "inDefinedTermSet": "http://snomed.info/sct",
-        "url": "http://snomed.info/id/4013105"
-      },
-      {
-        "@type": "DefinedTerm",
-        "name": "Unknown",
-        "termCode": "261665006",
-        "inDefinedTermSet": "http://snomed.info/sct",
-        "url": "http://snomed.info/id/261665006"
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "hasDefinedTerm": [
+            {
+              "@type": "DefinedTerm",
+              "name": "Positive",
+              "termCode": "4013106",
+              "url": "http://snomed.info/id/4013106"
+            },
+            {
+              "@type": "DefinedTerm",
+              "name": "Negative",
+              "termCode": "4013105",
+              "url": "http://snomed.info/id/4013105"
+            },
+            {
+              "@type": "DefinedTerm",
+              "name": "Unknown",
+              "termCode": "261665006",
+              "url": "http://snomed.info/id/261665006"
+            }
+          ]
+        }
       }
-    ]
-  }
-},
-
+    },
     {
       "@type": "PropertyValue",
       "name": "HTA",
@@ -850,5 +835,6 @@
     }
   ]
 }
+
 
 
