@@ -97,7 +97,7 @@
       "name": "age",
       "description": "The age of the patient in years at the time they were diagnosed with tuberculosis (TB)",
       "propertyID": "https://redcap.h3abionet.org/age",
-      "qudt:dataType": "http://www.w3.org/2001/XMLSchema#integer",
+      "qudt:dataType": "xsd:integer",
       "qudt:quantityKind": "quantitykind:Age",
       "qudt:unit": "unit:YR"
     },
@@ -142,7 +142,7 @@
       "name": "location",
       "description": "General location of the patient or where the TB infection is located",
       "propertyID": "https://redcap.h3abionet.org/location",
-      "qudt:dataType": "https://schema.org/String"
+       "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
@@ -158,21 +158,21 @@
       "name": "occupation",
       "description": "The patient's occupation",
       "propertyID": "https://redcap.h3abionet.org/occupation",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "marital_status",
       "description": "The marital status of the patient",
       "propertyID": "https://redcap.h3abionet.org/marital_status",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "history_of_tuberculosis",
       "description": "Indicates whether the patient has a previous history of tuberculosis",
       "propertyID": "https://redcap.h3abionet.org/history_of_tuberculosis",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
       
     },
     {
@@ -213,7 +213,7 @@
       "name": "HTA",
       "description": "Indicates if the patient has hypertension (high blood pressure)",
       "propertyID": "https://redcap.h3abionet.org/HTA",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
      
     },
     {
@@ -221,7 +221,7 @@
       "name": "diabetes",
       "description": "Indicates if the patient has diabetes",
       "propertyID": "https://redcap.h3abionet.org/diabetes",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
      
     },
     {
@@ -229,7 +229,7 @@
       "name": "chronic_kidney_disease",
       "description": "Indicates if the patient has chronic kidney disease",
       "propertyID": "https://redcap.h3abionet.org/chronic_kidney_disease",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -237,7 +237,7 @@
       "name": "ARV_treatment",
       "description": "Indicates if the patient is receiving antiretroviral treatment",
       "propertyID": "https://redcap.h3abionet.org/ARV_treatment",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
      
     },
     {
@@ -245,28 +245,28 @@
       "name": "tobacco_consumption",
       "description": "Indicates the patient's tobacco use status",
       "propertyID": "https://redcap.h3abionet.org/tobacco_consumption",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "alcohol_consumption",
       "description": "Indicates the patient's alcohol use status",
       "propertyID": "https://redcap.h3abionet.org/alcohol_consumption",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "consumption_of_other_drugs",
       "description": "Indicates the patient's use of other drugs",
       "propertyID": "https://redcap.h3abionet.org/consumption_of_other_drugs",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "nocturnal_excessive_sweating",
       "description": "Indicates if the patient experiences night sweats",
       "propertyID": "https://redcap.h3abionet.org/nocturnal_excessive_sweating",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -274,7 +274,7 @@
       "name": "anorexia",
       "description": "Indicates if the patient has anorexia",
       "propertyID": "https://redcap.h3abionet.org/anorexia",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -282,7 +282,9 @@
       "name": "weight_loss",
       "description": "Indicates if the patient has experienced significant weight loss",
       "propertyID": "https://redcap.h3abionet.org/weight_loss",
-      "unitText": "boolean"
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:Mass",
+      "qudt:unit": "unit:KiloGM"
      
     },
     {
@@ -290,7 +292,7 @@
       "name": "asthenia",
       "description": "Indicates if the patient experiences general weakness",
       "propertyID": "https://redcap.h3abionet.org/asthenia",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -298,7 +300,7 @@
       "name": "fever",
       "description": "Indicates if the patient has a fever",
       "propertyID": "https://redcap.h3abionet.org/fever",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
  
     },
     {
@@ -306,7 +308,7 @@
       "name": "cough",
       "description": "Indicates if the patient has a cough",
       "propertyID": "https://redcap.h3abionet.org/cough",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -314,7 +316,7 @@
       "name": "expectoration",
       "description": "Indicates if the patient produces sputum",
       "propertyID": "https://redcap.h3abionet.org/expectoration",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
      
     },
     {
@@ -322,7 +324,7 @@
       "name": "hemoptysis",
       "description": "Indicates if the patient has coughing up blood",
       "propertyID": "https://redcap.h3abionet.org/hemoptysis",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
   
     },
     {
@@ -330,7 +332,7 @@
       "name": "dyspnea",
       "description": "Indicates if the patient experiences difficulty breathing",
       "propertyID": "https://redcap.h3abionet.org/dyspnea",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
 
     },
     {
@@ -338,7 +340,7 @@
       "name": "chest_pain",
       "description": "Indicates if the patient experiences chest pain",
       "propertyID": "https://redcap.h3abionet.org/chest_pain",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
   
     },
     {
@@ -346,7 +348,7 @@
       "name": "Others",
       "description": "Any other relevant information not covered by other variables",
       "propertyID": "https://redcap.h3abionet.org/Others",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
  
     },
     {
@@ -418,7 +420,9 @@
       "name": "hemoglobin",
       "description": "The hemoglobin level in the patient's blood",
       "propertyID": "https://redcap.h3abionet.org/hemoglobin",
-      "unitText": "grams per deciliter"
+      "qudt:quantityKind": "quantitykind:HemoglobinMassPerVolume",
+      "qudt:unit": "unit:G-PER-DL",
+      "qudt:dataType": "xsd:decimal"
    
     },
     {
@@ -442,8 +446,9 @@
       "name": "CRP",
       "description": "The level of C-reactive protein in the patient's blood indicates inflammation",
       "propertyID": "https://redcap.h3abionet.org/CRP",
-      "unitText": "milligrams per liter"
-
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:CReactiveProteinMassPerVolume",
+      "qudt:unit": "unit:MG-PER-L     
     },
     {
       "@type": "PropertyValue",
@@ -460,6 +465,7 @@
   "description": "The urea level in the patient's blood, measured to assess kidney function",
   "propertyID": "https://athena.ohdsi.org/search-terms/terms/3009810",
   "qudt:dataType": "xsd:float",
+   "qudt:quantityKind": "quantitykind:UreaNitrogenMassPerVolume",
   "qudt:unit": "unit:MilliMOL-PER-L"
 },
 
@@ -469,7 +475,9 @@
       "name": "creatinine",
       "description": "The level of creatinine in the patient's blood indicates kidney function",
       "propertyID": "https://redcap.h3abionet.org/creatinine",
-      "unitText": "milligrams per deciliter"
+       "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:Concentration",
+      "qudt:unit": "unit:MilliGM-PER-dL"
  
     },
     {
@@ -477,7 +485,9 @@
       "name": "ALAT_SGPT",
       "description": "The level of alanine transaminase in the patient's blood indicates liver function",
       "propertyID": "https://redcap.h3abionet.org/ALAT_SGPT",
-      "unitText": "units per liter"
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:CatalyticActivityConcentration",
+       "qudt:unit": "unit:U-PER-L"
    
     },
     {
@@ -485,7 +495,9 @@
       "name": "ASAT_SGOT",
       "description": "The level of aspartate transaminase in the patient's blood indicates liver function",
       "propertyID": "https://redcap.h3abionet.org/ASAT_SGOT",
-      "unitText": "units per liter"
+     "qudt:dataType": "xsd:decimal",
+     "qudt:quantityKind": "quantitykind:CatalyticActivityConcentration",
+     "qudt:unit": "unit:U-PER-L"
     
     },
     {
@@ -493,14 +505,16 @@
       "name": "hepatitis_serology",
       "description": "Results of hepatitis serology tests",
       "propertyID": "https://redcap.h3abionet.org/hepatitis_serology",
-      "unitText": "text"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "CD4_count",
       "description": "The count of CD4 cells in the patient's blood indicates immune function",
       "propertyID": "https://redcap.h3abionet.org/CD4_count",
-      "unitText": "cells per microliter"
+      "qudt:dataType": "xsd:integer",
+      "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+      "qudt:unit": "unit:CEL-PER-UL
     
     },
     {
@@ -508,14 +522,14 @@
       "name": "search_for_AFB",
       "description": "Results of the Bacillus Acid-Resistant (BAAR) test",
       "propertyID": "https://redcap.h3abionet.org/search_for_AFB",
-      "unitText": "text"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "AFB_collection",
       "description": "Indicates if a sample was taken for the BAAR test",
       "propertyID": "https://redcap.h3abionet.org/AFB_collection",
-      "unitText": "boolean"
+      "qudt:dataType": "xsd:boolean"
    
     },
     {
@@ -523,7 +537,7 @@
       "name": "other_samples",
       "description": "Indicates if other samples were taken",
       "propertyID": "https://redcap.h3abionet.org/other_samples",
-      "unitText": "boolean"
+      "qudt:dataType": "xsd:boolean"
      
     },
     {
@@ -531,21 +545,21 @@
       "name": "PCR",
       "description": "The site from which a Polymerase Chain Reaction (PCR) test sample was taken",
       "propertyID": "https://redcap.h3abionet.org/PCR",
-      "unitText": "text"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "pleural_puncture",
       "description": "Pleural puncture",
       "propertyID": "https://redcap.h3abionet.org/pleural_puncture",
-      "unitText": "text"
+       "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "macroscopic_appearance_of_pleural_fluid",
       "description": "Macroscopic appearance of pleural fluid of patient",
       "propertyID": "https://redcap.h3abionet.org/macroscopic_appearance_of_pleural_fluid",
-      "unitText": "text"
+       "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
@@ -576,14 +590,14 @@
       "name": "appearance_of_ascites_fluid",
       "description": "The macroscopic appearance of the ascitic fluid",
       "propertyID": "https://redcap.h3abionet.org/appearance_of_ascites_fluid",
-      "unitText": "text"
+       "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "ascitic_fluid_analysis",
       "description": "Results of the analysis of the ascitic fluid",
       "propertyID": "https://redcap.h3abionet.org/ascitic_fluid_analysis",
-      "unitText": "text"
+       "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
@@ -614,7 +628,7 @@
       "name": "appearance_of_cerebrospinal_fluid",
       "description": "The appearance of cerebrospinal fluid",
       "propertyID": "https://redcap.h3abionet.org/appearance_of_cerebrospinal_fluid",
-      "unitText": "text"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
@@ -637,7 +651,7 @@
       "name": "pleural_TB",
       "description": "Pleural tuberculosis",
       "propertyID": "https://redcap.h3abionet.org/pleural_TB",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -645,7 +659,7 @@
       "name": "peripheral_lymph_node",
       "description": "Peripheral lymph node",
       "propertyID": "https://redcap.h3abionet.org/peripheral_lymph_node",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -653,7 +667,7 @@
       "name": "pott's_disease",
       "description": "Pott's disease",
       "propertyID": "https://redcap.h3abionet.org/potts_disease",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
    
     },
     {
@@ -661,7 +675,7 @@
       "name": "peritoneal",
       "description": "Peritoneal",
       "propertyID": "https://redcap.h3abionet.org/peritoneal",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -669,7 +683,7 @@
       "name": "neuromeningeal",
       "description": "Neuromeningeal",
       "propertyID": "https://redcap.h3abionet.org/neuromeningeal",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
     
     },
     {
@@ -677,7 +691,7 @@
       "name": "pericardial",
       "description": "Pericardial",
       "propertyID": "https://redcap.h3abionet.org/pericardial",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
      
     },
     {
@@ -685,14 +699,14 @@
       "name": "other_body_locations",
       "description": "Other body locations",
       "propertyID": "https://redcap.h3abionet.org/other_body_locations",
-      "unitText": "text"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "other_locations",
       "description": "Other locations",
       "propertyID": "https://redcap.h3abionet.org/other_locations",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
@@ -707,14 +721,14 @@
       "name": "spitting_at_the_end_of_the_2nd_month",
       "description": "Spitting at the end of the 2nd month",
       "propertyID": "https://redcap.h3abionet.org/spitting_at_the_end_of_the_2nd_month",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "treatment_result",
       "description": "Treatment result that is either positive, negative or not done",
       "propertyID": "https://redcap.h3abionet.org/treatment_result",
-      "unitText": "text",
+        "qudt:dataType": "xsd:string",
       "valueReference": [
         {
           "@type": "CategoryCode",
@@ -762,14 +776,14 @@
       "name": "age_category",
       "description": "Age category of patient",
       "propertyID": "https://redcap.h3abionet.org/age_category",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "treatment_outcome_therapeutic_success",
       "description": "Treatment outcome, therapeutic success",
       "propertyID": "https://redcap.h3abionet.org/treatment_outcome_therapeutic_success",
-      "unitText": "boolean"
+       "qudt:dataType": "xsd:boolean"
 
     },
     {
@@ -777,7 +791,7 @@
       "name": "clinical_category_2",
       "description": "Clinical category_2, that is, a new case or reprocessing",
       "propertyID": "https://redcap.h3abionet.org/clinical_category_2",
-      "unitText": "text",
+        "qudt:dataType": "xsd:string",
       "valueReference": [
         {
           "@type": "CategoryCode",
@@ -810,17 +824,18 @@
       "name": "chronic_kidney_disease_in_2_categories",
       "description": "Chronic kidney disease in category_2",
       "propertyID": "https://redcap.h3abionet.org/chronic_kidney_disease_in_2_categories",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "smoking_in_2_categories",
       "description": "Smoking in category_2",
       "propertyID": "https://redcap.h3abionet.org/smoking_in_2_categories",
-      "unitText": "text"
+        "qudt:dataType": "xsd:string"
     }
   ]
 }
+
 
 
 
