@@ -187,6 +187,13 @@
       "unitText": "boolean"
       
     },
+    {
+      "@type": "PropertyValue",
+      "name": "hiv_status",
+      "alternateName": "HIV status of patient",
+      "description": "HIV status of patient as assessed through testing. Controlled vocabulary includes positive, negative, or unknown.",
+      "qudt:dataType": "https://schema.org/Text",
+    },
 {
 
   "@type": "DefinedTerm",
@@ -843,4 +850,5 @@
     }
   ]
 }
+
 
