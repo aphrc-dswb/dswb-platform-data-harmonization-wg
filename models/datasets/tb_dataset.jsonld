@@ -514,7 +514,7 @@
       "propertyID": "https://redcap.h3abionet.org/CD4_count",
       "qudt:dataType": "xsd:integer",
       "qudt:quantityKind": "quantitykind:AmountOfSubstance",
-      "qudt:unit": "unit:CEL-PER-UL
+      "qudt:unit": "unit:CEL-PER-UL"
     
     },
     {
@@ -566,7 +566,9 @@
       "name": "pleural_proteins_g/L",
       "description": "The level of proteins in the pleural fluid, measured in grams per liter",
       "propertyID": "https://redcap.h3abionet.org/pleural_proteins_g_L",
-      "unitText": "grams per liter"
+      "qudt:dataType": "xsd:decimal",
+     "qudt:quantityKind": "quantitykind:MassConcentration",
+     "qudt:unit": "unit:G_PER_L
     
     },
     {
@@ -574,7 +576,9 @@
       "name": "pleural_leukocytes/mm3",
       "description": "The count of leukocytes in the pleural fluid, measured in cubic millimeters",
       "propertyID": "https://redcap.h3abionet.org/pleural_leukocytes_mm3",
-      "unitText": "cells per cubic millimeter"
+      "qudt:dataType": "xsd:decimal",
+     "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+     "qudt:unit": "unit:CELLS_PER_MM3"
     
     },
     {
@@ -582,7 +586,9 @@
       "name": "Pleural_lymphocytes_%",
       "description": "The percentage of lymphocytes in the pleural fluid",
       "propertyID": "https://redcap.h3abionet.org/Pleural_lymphocytes_%",
-      "unitText": "percentage"
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:Fraction",
+     "qudt:unit": "unit:PERCENT"
       
     },
     {
@@ -604,7 +610,9 @@
       "name": "ascites_proteins_g/L",
       "description": "The level of proteins in the ascitic fluid, measured in grams per liter",
       "propertyID": "https://redcap.h3abionet.org/ascites_proteins_g_L",
-      "unitText": "grams per liter"
+       "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:Mass",
+      "qudt:unit": "unit:G_PER_L
    
     },
     {
@@ -612,17 +620,21 @@
       "name": "ascites_leukocytes_mm3",
       "description": "The count of leukocytes in the ascitic fluid, measured in cubic millimeters",
       "propertyID": "https://redcap.h3abionet.org/ascites_leukocytes_mm3",
-      "unitText": "cells per cubic millimeter"
+      "qudt:dataType": "xsd:decimal",
+     "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+     "qudt:unit": "unit:CELLS_PER_MM3
      
     },
     {
-      "@type": "PropertyValue",
-      "name": "Lymphocytes ascites (%)",
-      "description": "The percentage of lymphocytes in the ascitic fluid",
-      "propertyID": "https://redcap.h3abionet.org/Lymphocytes_ascites_%",
-      "unitText": "percentage"
-    
-    },
+  "@type": "PropertyValue",
+  "name": "Lymphocytes_ascites_percent",
+  "description": "The percentage of lymphocytes in the ascitic fluid",
+  "propertyID": "https://redcap.h3abionet.org/Lymphocytes_ascites_%",
+  "qudt:dataType": "xsd:decimal",
+  "qudt:quantityKind": "quantitykind:Fraction",
+  "qudt:unit": "unit:PERCENT"
+},
+
     {
       "@type": "PropertyValue",
       "name": "appearance_of_cerebrospinal_fluid",
@@ -635,7 +647,9 @@
       "name": "CSF_leukocytes_mm3",
       "description": "CSF leukocytes in millimeters cube",
       "propertyID": "https://redcap.h3abionet.org/CSF_leukocytes_mm3",
-      "unitText": "cells per cubic millimeter"
+      "qudt:dataType": "xsd:decimal",
+      "qudt:quantityKind": "quantitykind:AmountOfSubstance",
+      "qudt:unit": "unit:CEL/MM3"
     
     },
     {
@@ -643,7 +657,9 @@
       "name": "CSF_lymphocytes_%",
       "description": "CSF lymphocytes in percentage",
       "propertyID": "https://redcap.h3abionet.org/CSF_lymphocytes_%",
-      "unitText": "percentage"
+      "qudt:dataType": "xsd:decimal",
+     "qudt:quantityKind": "quantitykind:Fraction",
+     "qudt:unit": "unit:PCT"
     
     },
     {
@@ -706,14 +722,14 @@
       "name": "other_locations",
       "description": "Other locations",
       "propertyID": "https://redcap.h3abionet.org/other_locations",
-        "qudt:dataType": "xsd:string"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
       "name": "number_of_sites_reached",
       "description": "Number of sites reached",
       "propertyID": "https://redcap.h3abionet.org/number_of_sites_reached",
-      "unitText": "integer"
+       "qudt:dataType": "xsd:string"
      
     },
     {
@@ -721,7 +737,7 @@
       "name": "spitting_at_the_end_of_the_2nd_month",
       "description": "Spitting at the end of the 2nd month",
       "propertyID": "https://redcap.h3abionet.org/spitting_at_the_end_of_the_2nd_month",
-        "qudt:dataType": "xsd:string"
+      "qudt:dataType": "xsd:string"
     },
     {
       "@type": "PropertyValue",
@@ -835,6 +851,7 @@
     }
   ]
 }
+
 
 
 
