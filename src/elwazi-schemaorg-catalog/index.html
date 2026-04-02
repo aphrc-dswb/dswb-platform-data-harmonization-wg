@@ -1,1 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Elwazi Schema.org Metadata Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+    }
+    h1, h2 {
+      color: #0b3d91;
+    }
+    .box {
+      background: #f8f9fb;
+      border-left: 4px solid #0b3d91;
+      padding: 12px 16px;
+      margin: 20px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #0b3d91;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .small {
+      color: #555;
+      font-size: 0.95em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f2f5fb;
+    }
+  </style>
+</head>
+<body>
+  <h1>Elwazi Schema.org Metadata Catalog</h1>
 
+  <p>
+    This site provides access to Pathfinder site codebooks hosted through the Elwazi catalog
+    and their translated <strong>Schema.org JSON-LD</strong> records for improved machine readability,
+    interoperability, and FAIR-aligned metadata reuse.
+  </p>
+
+  <div class="box">
+    <strong>Purpose:</strong> The goal of this catalog is to support translation of metadata
+    from spreadsheet-based codebooks into structured Schema.org JSON-LD that can be reused
+    across different dataset types and discovery workflows.
+  </div>
+
+  <h2>Pathfinder sites</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Site</th>
+        <th>Description</th>
+        <th>Access</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>AHRI</strong></td>
+        <td>Armauer Hansen Research Institute metadata and translated JSON-LD records.</td>
+        <td><a href="./AHRI/">Open AHRI site page</a></td>
+      </tr>
+      <tr>
+        <td><strong>DGH</strong></td>
+        <td>Douala General Hospital metadata and translated JSON-LD records.</td>
+        <td><a href="./DGH/">Open DGH site page</a></td>
+      </tr>
+      <tr>
+        <td><strong>IRESSEF</strong></td>
+        <td>Institute for Health Research, Epidemiological Surveillance and Training metadata and translated JSON-LD records.</td>
+        <td><a href="./IRESSEF/">Open IRESSEF site page</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>What is included</h2>
+  <ul>
+    <li>Original spreadsheet codebooks from the Elwazi catalog</li>
+    <li>Translated Schema.org JSON-LD metadata files</li>
+    <li>Site-specific notes on mapping and metadata translation where available</li>
+  </ul>
+
+  <h2>Review focus</h2>
+  <ul>
+    <li>Alignment with Schema.org and Science-on-Schema.org guidance</li>
+    <li>Improved machine readability of codebook metadata</li>
+    <li>Consistency across Pathfinder sites</li>
+    <li>Support for reusable metadata patterns across tabular and geospatial datasets</li>
+  </ul>
+
+  <h2>Repository structure</h2>
+  <pre><code>src/elwazi-schemaorg-catalog/
+├── .nojekyll
+├── README.md
+├── index.html
+├── AHRI/
+├── DGH/
+└── IRESSEF/</code></pre>
+
+  <p class="small">
+    Maintained by David Amadi.
+  </p>
+</body>
+</html>
